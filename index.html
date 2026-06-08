@@ -250,6 +250,19 @@
   .renta-table .rt-bonus .rt-val,.renta-table .rt-bonus td{color:var(--teal)}
   .renta-foot{padding:18px 26px;font-size:.82rem;color:var(--soft);line-height:1.55;border-top:1px solid var(--line);background:var(--mist-2)}
   @media(max-width:920px){.renta-table td{padding:14px 16px}.renta-foot{padding:14px 16px}}
+
+  /* démarches DPC */
+  .dpc{background:var(--mist-2)}
+  .steps-flow{max-width:720px;margin:0 auto}
+  .sf-item{position:relative;display:flex;gap:22px;padding-bottom:26px}
+  .sf-item:last-child{padding-bottom:0}
+  .sf-item:not(:last-child)::before{content:"";position:absolute;left:21px;top:46px;bottom:0;width:2px;background:var(--line)}
+  .sf-num{flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--azure);color:var(--blue);font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;display:grid;place-items:center;position:relative;z-index:1}
+  .sf-body{flex:1;padding-top:3px}
+  .sf-actor{display:inline-block;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--teal);background:rgba(28,155,142,.12);padding:3px 10px;border-radius:999px;margin-bottom:8px}
+  .sf-body p{font-size:1rem;color:var(--navy);line-height:1.6}
+  .sf-note{max-width:720px;margin:30px auto 0;background:var(--white);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:14px 18px;font-size:.92rem;color:var(--navy);line-height:1.55}
+  @media(max-width:560px){.sf-item{gap:16px}.sf-num{width:38px;height:38px;font-size:1.05rem}.sf-item:not(:last-child)::before{left:18px;top:40px}}
   @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
 
   /* testimonials */
@@ -470,6 +483,26 @@
         <p>Le parcours intègre les exigences de l'<a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000036209897" target="_blank" rel="noopener">arrêté du 13 décembre 2017</a> relatif à la procédure d'inscription et aux conditions de prise en charge du dispositif médical à pression positive continue (PPC) pour le traitement de l'apnée du sommeil, ainsi que les recommandations de la HAS, de la SFRMS et de l'AASM.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- DEMARCHES DPC -->
+<section class="block dpc" id="dpc">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Après la formation</span>
+      <h2>Quelles démarches pour faire valider le parcours DPC « Sommeil » ?</h2>
+      <p>Une fois vos 40 heures réalisées, voici le chemin — étape par étape — jusqu'à la validation officielle de votre parcours DPC « Sommeil ».</p>
+    </div>
+    <div class="steps-flow">
+      <div class="sf-item reveal"><div class="sf-num">1</div><div class="sf-body"><span class="sf-actor">Médecin</span><p>Le médecin suit une formation sommeil de 40 h organisée par un organisme agréé DPC.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">2</div><div class="sf-body"><span class="sf-actor">Organisme DPC</span><p>L'organisme de formation DPC délivre au médecin, à l'issue de la formation suivie, un certificat de participation à l'action de DPC.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">3</div><div class="sf-body"><span class="sf-actor">Médecin → CNP</span><p>Le médecin adresse au CNP de sa spécialité, ou au Collège de Médecine Générale, les certificats de participation aux différentes actions de DPC totalisant 40 h.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">4</div><div class="sf-body"><span class="sf-actor">CNP</span><p>Le CNP établit, si les conditions sont remplies, une attestation de parcours DPC « Sommeil ».</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">5</div><div class="sf-body"><span class="sf-actor">Médecin → CNOM</span><p>Le médecin adresse un exemplaire de l'attestation du CNP au CNOM.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">6</div><div class="sf-body"><span class="sf-actor">CNOM</span><p>Le CNOM remet au praticien une validation de DPC « Sommeil », à faire valoir si nécessaire auprès de l'Assurance Maladie.</p></div></div>
+    </div>
+    <p class="sf-note">✅ En tant qu'organisme agréé DPC, <strong>Somnéa</strong> vous délivre le certificat de participation (étape 2) à l'issue de votre formation de 40 h.</p>
   </div>
 </section>
 
