@@ -28,5 +28,7 @@ Ouvrir `index.html` dans un navigateur — c'est tout.
 
 ## Conformité
 
-Formation conçue dans le respect des recommandations HAS / SFRMS / AASM et de
-l'arrêté du 13/12/2017 (FST Médecine du Sommeil).
+Formation conçue dans le respect des recommandations HAS / SFRMS / AASM et en
+cohérence avec l'arrêté du 13 décembre 2017 (procédure d'inscription et conditions
+de prise en charge du traitement par PPC de l'apnée du sommeil) —
+[Légifrance](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000036209897).

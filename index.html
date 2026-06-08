@@ -206,6 +206,20 @@
   .deduct-steps h4{font-family:'Mulish',sans-serif;font-weight:700;font-size:1rem;margin-bottom:2px;color:var(--navy)}
   .deduct-steps p{font-size:.92rem;color:var(--soft)}
   .deduct-note{margin-top:22px;background:rgba(28,155,142,.1);border:1px solid rgba(28,155,142,.3);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--navy)}
+
+  /* cadre réglementaire */
+  .reglem{padding:16px 0}
+  .reglem-card{display:flex;gap:24px;align-items:flex-start;background:linear-gradient(150deg,var(--navy),var(--blue));color:#fff;border-radius:22px;padding:36px 40px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+  .reglem-card::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(45,140,208,.45),transparent 65%);top:-100px;right:-80px}
+  .reglem-ico{font-size:2.4rem;flex-shrink:0;position:relative;line-height:1}
+  .reglem-body{position:relative}
+  .reglem-body .eyebrow{color:#9fd0f0}
+  .reglem-body .eyebrow::before{background:#9fd0f0}
+  .reglem-body h3{color:#fff;font-size:1.5rem;margin:10px 0 12px}
+  .reglem-body p{color:rgba(255,255,255,.85);font-size:1rem;line-height:1.7}
+  .reglem-body a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .reglem-body a:hover{color:#9fd0f0}
+  @media(max-width:920px){.reglem-card{flex-direction:column;gap:14px;padding:28px 22px}}
   @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
 
   /* testimonials */
@@ -406,10 +420,24 @@
       <div class="prog-item reveal" data-d="1"><span class="pn">02</span><div><h3>Le SAHOS en pratique clinique</h3><p>Épidémiologie, tableau clinique, dépistage, conséquences multisystémiques et stratégie diagnostique.</p></div></div>
       <div class="prog-item reveal"><span class="pn">03</span><div><h3>Examens diagnostiques</h3><p>Polygraphie ventilatoire et polysomnographie : indications, technique, lecture et interprétation des résultats.</p></div></div>
       <div class="prog-item reveal" data-d="1"><span class="pn">04</span><div><h3>Stratégies thérapeutiques du SAHOS</h3><p>Algorithme décisionnel HAS, approche par endotypes et phénotypes et situations cliniques particulières.</p></div></div>
-      <div class="prog-item reveal"><span class="pn">05</span><div><h3>Mise en route &amp; suivi de la PPC</h3><p>Interfaces, titration, initiation, observance, télésurveillance et gestion des effets secondaires.</p></div></div>
+      <div class="prog-item reveal"><span class="pn">05</span><div><h3>Mise en route &amp; suivi de la PPC</h3><p>Interfaces, titration, initiation, observance, télésurveillance et gestion des effets secondaires, dans le cadre de prise en charge fixé par l'arrêté du 13 décembre 2017.</p></div></div>
       <div class="prog-item reveal" data-d="1"><span class="pn">06</span><div><h3>Orthèses d'avancée mandibulaire (OAM)</h3><p>Mécanisme d'action, indications, parcours de fabrication, titration, contrôle et suivi au long cours.</p></div></div>
       <div class="prog-item reveal"><span class="pn">07</span><div><h3>Cas cliniques &amp; approche multidisciplinaire</h3><p>Interprétation de tracés PG/PSG réels et cas complexes en coordination avec l'ORL et le pneumologue.</p></div></div>
       <div class="prog-item reveal" data-d="1"><span class="pn">08</span><div><h3>Évaluation finale &amp; certification</h3><p>QCM final, cas cliniques intégratifs et délivrance de l'attestation de formation 40h.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CADRE REGLEMENTAIRE -->
+<section class="reglem" id="cadre">
+  <div class="wrap">
+    <div class="reglem-card reveal">
+      <div class="reglem-ico">⚖️</div>
+      <div class="reglem-body">
+        <span class="eyebrow">Cadre réglementaire</span>
+        <h3>Une formation ancrée dans la réglementation en vigueur</h3>
+        <p>Le parcours intègre les exigences de l'<a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000036209897" target="_blank" rel="noopener">arrêté du 13 décembre 2017</a> relatif à la procédure d'inscription et aux conditions de prise en charge du dispositif médical à pression positive continue (PPC) pour le traitement de l'apnée du sommeil, ainsi que les recommandations de la HAS, de la SFRMS et de l'AASM.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -588,7 +616,7 @@
         <a href="#">Confidentialité</a>
       </div>
     </div>
-    <div class="foot-copy">© 2026 Somnéa — Formation certifiante en apnée du sommeil.<br>Organisme de formation enregistré sous le n° de déclaration d'activité [NDA à compléter] auprès de la DREETS — cet enregistrement ne vaut pas agrément de l'État. Certifié Qualiopi · Agréé DPC (ANDPC).<br>« Somnéa » est un nom provisoire, à personnaliser.</div>
+    <div class="foot-copy">© 2026 Somnéa — Formation certifiante en apnée du sommeil.<br>Programme conçu en cohérence avec les recommandations HAS, SFRMS, AASM et l'arrêté du 13 décembre 2017 (conditions de prise en charge du traitement par PPC de l'apnée du sommeil).<br>Organisme de formation enregistré sous le n° de déclaration d'activité [NDA à compléter] auprès de la DREETS — cet enregistrement ne vaut pas agrément de l'État. Certifié Qualiopi · Agréé DPC (ANDPC).<br>« Somnéa » est un nom provisoire, à personnaliser.</div>
   </div>
 </footer>
 
