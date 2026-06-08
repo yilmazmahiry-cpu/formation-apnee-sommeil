@@ -220,6 +220,24 @@
   .reglem-body a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
   .reglem-body a:hover{color:#9fd0f0}
   @media(max-width:920px){.reglem-card{flex-direction:column;gap:14px;padding:28px 22px}}
+
+  /* rentabilité */
+  .renta{background:linear-gradient(180deg,var(--mist-2),var(--paper))}
+  .renta .sec-head h2 em{font-style:italic;color:var(--blue)}
+  .renta-card{max-width:680px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-lg);overflow:hidden}
+  .renta-table{width:100%;border-collapse:collapse}
+  .renta-table td{padding:16px 26px;border-top:1px solid var(--line);font-size:1rem;color:var(--navy);vertical-align:middle}
+  .renta-table tr:first-child td{border-top:none}
+  .renta-table td span{display:block;font-size:.8rem;color:var(--soft);font-weight:400;margin-top:3px;line-height:1.4}
+  .renta-table .rt-val{text-align:right;font-weight:700;white-space:nowrap}
+  .renta-table .rt-sub{background:var(--mist-2)}
+  .renta-table .rt-sub td{font-weight:700}
+  .renta-table .rt-result td{background:var(--navy);color:#fff;font-family:'Fraunces',serif;font-size:1.18rem}
+  .renta-table .rt-result .rt-val{font-size:1.5rem}
+  .renta-table .rt-bonus td{background:rgba(28,155,142,.1);font-weight:700}
+  .renta-table .rt-bonus .rt-val,.renta-table .rt-bonus td{color:var(--teal)}
+  .renta-foot{padding:18px 26px;font-size:.82rem;color:var(--soft);line-height:1.55;border-top:1px solid var(--line);background:var(--mist-2)}
+  @media(max-width:920px){.renta-table td{padding:14px 16px}.renta-foot{padding:14px 16px}}
   @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
 
   /* testimonials */
@@ -516,6 +534,30 @@
         </ul>
         <div class="deduct-note">💡 La déduction réduit aussi l'assiette de vos cotisations sociales : l'économie totale peut être supérieure aux montants ci-dessus.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- RENTABILITE -->
+<section class="block renta" id="rentabilite">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Retour sur investissement</span>
+      <h2>Rentabilisée dès le <em>9ᵉ patient</em></h2>
+      <p>Un patient pris en charge pour une apnée du sommeil, ce n'est pas une consultation isolée : c'est un parcours de suivi récurrent. Le calcul est sans appel.</p>
+    </div>
+    <div class="renta-card reveal">
+      <table class="renta-table">
+        <tbody>
+          <tr><td>Prix d'une consultation</td><td class="rt-val">30 €</td></tr>
+          <tr><td>Consultations par patient <span>bilan, mise en route, suivi à 1, 3 et 12 mois et au-delà</span></td><td class="rt-val">× 6</td></tr>
+          <tr class="rt-sub"><td>Revenu par patient pris en charge</td><td class="rt-val">180 €</td></tr>
+          <tr><td>Coût de la formation</td><td class="rt-val">1 500 €</td></tr>
+          <tr class="rt-result"><td>Formation rentabilisée dès le</td><td class="rt-val">9ᵉ patient</td></tr>
+          <tr class="rt-bonus"><td>Après déduction de votre BNC (coût réel ≈ 885 €)</td><td class="rt-val">dès le 5ᵉ patient</td></tr>
+        </tbody>
+      </table>
+      <p class="renta-foot">Au-delà, chaque patient suivi représente environ <strong>180 € de revenu récurrent</strong> par an. Calcul indicatif sur la base d'une consultation à 30 € et de 6 consultations par patient — à ajuster selon votre secteur et votre spécialité.</p>
     </div>
   </div>
 </section>
