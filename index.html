@@ -27,6 +27,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
+  section[id],div[id]{scroll-margin-top:90px}
   body{
     font-family:'Mulish',sans-serif;
     color:var(--navy);
@@ -66,6 +67,7 @@
   .nav-links{display:flex;align-items:center;gap:34px}
   .nav-links a{font-size:.95rem;font-weight:500;color:var(--soft);transition:color .2s}
   .nav-links a:hover{color:var(--blue)}
+  .nav-links a.active{color:var(--blue);font-weight:700}
   .btn{
     display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;
     font-family:'Mulish',sans-serif;font-weight:700;font-size:.95rem;
@@ -655,8 +657,9 @@
         <a href="#financement">Financement</a>
         <a href="#tarif">Tarif</a>
         <a href="#contact">Contact</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Confidentialité</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgv.html">CGV</a>
+        <a href="confidentialite.html">Confidentialité</a>
       </div>
     </div>
     <div class="foot-copy">© 2026 Somnéa — Formation certifiante en apnée du sommeil.<br>Programme conçu en cohérence avec les recommandations HAS, SFRMS, AASM et l'arrêté du 13 décembre 2017 (conditions de prise en charge du traitement par PPC de l'apnée du sommeil).<br>Organisme de formation enregistré sous le n° de déclaration d'activité [NDA à compléter] auprès de la DREETS — cet enregistrement ne vaut pas agrément de l'État. Certifié Qualiopi · Agréé DPC (ANDPC).<br>« Somnéa » est un nom provisoire, à personnaliser.</div>
@@ -678,6 +681,21 @@
 
   // faq
   document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+
+  // scrollspy : surbrillance de l'onglet actif pendant le défilement
+  (function(){
+    const links=[].slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    const spy=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.classList.remove('active');});
+          if(map[e.target.id])map[e.target.id].classList.add('active');
+        }
+      });
+    },{rootMargin:'-50% 0px -50% 0px',threshold:0});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)spy.observe(el);});
+  })();
 
   // toast helper
   function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3600);}
