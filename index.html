@@ -143,13 +143,17 @@
 
   /* programme */
   .prog{background:linear-gradient(180deg,var(--mist-2),var(--paper))}
-  .prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-  .prog-item{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
-    padding:28px 30px;display:flex;gap:20px;align-items:flex-start;transition:all .3s}
-  .prog-item:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-  .prog-item .pn{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--azure);font-weight:600;line-height:1;min-width:46px}
-  .prog-item h3{font-size:1.16rem;margin-bottom:7px}
-  .prog-item p{font-size:.94rem;color:var(--soft)}
+  .timeline{max-width:760px;margin:0 auto}
+  .tl-item{position:relative;display:flex;gap:24px;padding-bottom:30px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item:not(:last-child)::before{content:"";position:absolute;left:23px;top:52px;bottom:0;width:2px;background:var(--line)}
+  .tl-marker{flex-shrink:0}
+  .tl-marker span{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--azure));color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;display:grid;place-items:center;box-shadow:0 8px 18px rgba(45,140,208,.3)}
+  .tl-content{flex:1;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 24px;transition:box-shadow .25s,transform .25s}
+  .tl-content:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+  .tl-content h3{font-size:1.16rem;margin-bottom:6px}
+  .tl-content p{font-size:.95rem;color:var(--soft);line-height:1.6}
+  @media(max-width:560px){.tl-item{gap:16px}.tl-content{padding:16px 18px}.tl-item:not(:last-child)::before{left:20px;top:46px}.tl-marker span{width:42px;height:42px;font-size:1.05rem}}
 
   /* benefits split */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -435,15 +439,15 @@
       <h2>Un parcours complet, du dépistage à la prescription</h2>
       <p>Huit modules progressifs qui vous mènent de la compréhension de la pathologie jusqu'à la prescription, le suivi de vos patients et la validation de vos compétences.</p>
     </div>
-    <div class="prog-grid">
-      <div class="prog-item reveal"><span class="pn">01</span><div><h3>Bases du sommeil &amp; physiologie respiratoire</h3><p>Physiologie du sommeil normal, régulation veille-sommeil et physiopathologie de l'obstruction des voies aériennes supérieures.</p></div></div>
-      <div class="prog-item reveal" data-d="1"><span class="pn">02</span><div><h3>Le SAHOS en pratique clinique</h3><p>Épidémiologie, tableau clinique, dépistage, conséquences multisystémiques et stratégie diagnostique.</p></div></div>
-      <div class="prog-item reveal"><span class="pn">03</span><div><h3>Examens diagnostiques</h3><p>Polygraphie ventilatoire et polysomnographie : indications, technique, lecture et interprétation des résultats.</p></div></div>
-      <div class="prog-item reveal" data-d="1"><span class="pn">04</span><div><h3>Stratégies thérapeutiques du SAHOS</h3><p>Algorithme décisionnel HAS, approche par endotypes et phénotypes et situations cliniques particulières.</p></div></div>
-      <div class="prog-item reveal"><span class="pn">05</span><div><h3>Mise en route &amp; suivi de la PPC</h3><p>Interfaces, titration, initiation, observance, télésurveillance et gestion des effets secondaires, dans le cadre de prise en charge fixé par l'arrêté du 13 décembre 2017.</p></div></div>
-      <div class="prog-item reveal" data-d="1"><span class="pn">06</span><div><h3>Orthèses d'avancée mandibulaire (OAM)</h3><p>Mécanisme d'action, indications, parcours de fabrication, titration, contrôle et suivi au long cours.</p></div></div>
-      <div class="prog-item reveal"><span class="pn">07</span><div><h3>Cas cliniques &amp; approche multidisciplinaire</h3><p>Interprétation de tracés PG/PSG réels et cas complexes en coordination avec l'ORL et le pneumologue.</p></div></div>
-      <div class="prog-item reveal" data-d="1"><span class="pn">08</span><div><h3>Évaluation finale &amp; certification</h3><p>QCM final, cas cliniques intégratifs et délivrance de l'attestation de formation 40h.</p></div></div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-marker"><span>01</span></div><div class="tl-content"><h3>Bases du sommeil &amp; physiologie respiratoire</h3><p>Physiologie du sommeil normal, régulation veille-sommeil et physiopathologie de l'obstruction des voies aériennes supérieures.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>02</span></div><div class="tl-content"><h3>Le SAHOS en pratique clinique</h3><p>Épidémiologie, tableau clinique, dépistage, conséquences multisystémiques et stratégie diagnostique.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>03</span></div><div class="tl-content"><h3>Examens diagnostiques</h3><p>Polygraphie ventilatoire et polysomnographie : indications, technique, lecture et interprétation des résultats.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>04</span></div><div class="tl-content"><h3>Stratégies thérapeutiques du SAHOS</h3><p>Algorithme décisionnel HAS, approche par endotypes et phénotypes et situations cliniques particulières.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>05</span></div><div class="tl-content"><h3>Mise en route &amp; suivi de la PPC</h3><p>Interfaces, titration, initiation, observance, télésurveillance et gestion des effets secondaires, dans le cadre de prise en charge fixé par l'arrêté du 13 décembre 2017.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>06</span></div><div class="tl-content"><h3>Orthèses d'avancée mandibulaire (OAM)</h3><p>Mécanisme d'action, indications, parcours de fabrication, titration, contrôle et suivi au long cours.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>07</span></div><div class="tl-content"><h3>Cas cliniques &amp; approche multidisciplinaire</h3><p>Interprétation de tracés PG/PSG réels et cas complexes en coordination avec l'ORL et le pneumologue.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>08</span></div><div class="tl-content"><h3>Évaluation finale &amp; certification</h3><p>QCM final, cas cliniques intégratifs et délivrance de l'attestation de formation 40h.</p></div></div>
     </div>
   </div>
 </section>
