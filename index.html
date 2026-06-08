@@ -140,6 +140,9 @@
   .card .ico svg{width:26px;height:26px}
   .card h3{font-size:1.18rem;margin-bottom:8px}
   .card p{font-size:.94rem;color:var(--soft)}
+  .card-tag{display:inline-block;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);background:var(--mist);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+  .card.primary{border-color:var(--azure);box-shadow:0 10px 28px rgba(45,140,208,.14)}
+  .card.primary .card-tag{background:var(--blue);color:#fff}
 
   /* programme */
   .prog{background:linear-gradient(180deg,var(--mist-2),var(--paper))}
@@ -347,7 +350,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <button class="btn btn-primary" onclick="goPay()">
-      Accéder à la formation
+      S'inscrire à la formation
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </button>
   </div>
@@ -366,7 +369,7 @@
       <p class="lead reveal" data-d="2">Grâce à cette formation certifiante de 40 heures, prenez en charge vos patients du dépistage à la prescription de la PPC et de l'orthèse — dans le cadre de l'arrêté du 13 décembre 2017 — sans les adresser systématiquement au pneumologue.</p>
       <div class="hero-cta reveal" data-d="3">
         <button class="btn btn-primary" onclick="goPay()">
-          Accéder à la formation
+          S'inscrire à la formation
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
         <a href="#contact" class="btn btn-ghost">Demander des informations</a>
@@ -401,31 +404,35 @@
 <!-- POUR QUI -->
 <section class="block" id="pourqui">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <span class="eyebrow">À qui s'adresse la formation</span>
-      <h2>Pensée pour les professionnels de santé</h2>
-      <p>Un parcours adapté à votre pratique, quel que soit votre exercice, pour intégrer la prise en charge de l'apnée du sommeil à votre activité.</p>
+      <h2>Conçue pour les professionnels de santé</h2>
+      <p>Pensée d'abord pour les <strong>médecins prescripteurs</strong>, elle s'ouvre à tous les acteurs du parcours de l'apnée du sommeil — chacun selon son rôle.</p>
     </div>
     <div class="cards">
-      <div class="card reveal">
+      <div class="card primary reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7 7-7z"/></svg></div>
+        <span class="card-tag">Prescripteurs</span>
         <h3>Médecins</h3>
-        <p>Généralistes et spécialistes souhaitant élargir leur champ d'intervention.</p>
+        <p>Généralistes, ORL, pneumologues, cardiologues, neurologues… Diagnostiquez, prescrivez la PPC et l'orthèse, et suivez vos patients en toute autonomie.</p>
       </div>
       <div class="card reveal" data-d="1">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5.5c-2-2-5-2-6.5 0C4 7 4.5 10 6 14c.8 2.2 1 5 2.5 5s1.5-3 3.5-3 2 3 3.5 3 1.7-2.8 2.5-5c1.5-4 2-7 .5-8.5-1.5-2-4.5-2-6.5 0z"/></svg></div>
+        <span class="card-tag">Partenaire OAM</span>
         <h3>Chirurgiens-dentistes</h3>
-        <p>Pour le repérage et la prise en charge par orthèse d'avancée mandibulaire.</p>
+        <p>Maîtrisez l'orthèse d'avancée mandibulaire : indications, parcours de fabrication, titration et contrôle de l'efficacité.</p>
       </div>
       <div class="card reveal" data-d="2">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 9.5L9.5 4.5a3.5 3.5 0 015 5l-5 5a3.5 3.5 0 01-5-5z"/><path d="M14 9l-4 4"/></svg></div>
+        <span class="card-tag">Dépistage &amp; orientation</span>
         <h3>Pharmaciens</h3>
-        <p>Pour conseiller, accompagner l'observance et orienter les patients.</p>
+        <p>Repérez les patients à risque, accompagnez l'observance du traitement et orientez vers le bon parcours de soins.</p>
       </div>
       <div class="card reveal" data-d="3">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
+        <span class="card-tag">Acteurs du parcours</span>
         <h3>Autres pros de santé</h3>
-        <p>Kinés, infirmiers et acteurs du sommeil engagés dans le parcours patient.</p>
+        <p>Infirmiers, kinésithérapeutes et acteurs du sommeil impliqués dans le dépistage et le suivi coordonné des patients.</p>
       </div>
     </div>
   </div>
