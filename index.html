@@ -185,6 +185,29 @@
   .price-card .btn-primary{width:100%;justify-content:center;font-size:1.05rem;padding:16px}
   .price-foot{text-align:center;font-size:.85rem;color:var(--soft);margin-top:14px}
 
+  /* déductibilité BNC */
+  .deduct{background:linear-gradient(180deg,var(--paper),var(--mist-2))}
+  .deduct .sec-head h2 em{font-style:italic;color:var(--blue)}
+  .deduct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+  .deduct-table-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+  .deduct-table-head{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;padding:18px 26px;background:var(--navy);color:#fff;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .deduct-table-head span:not(:first-child){text-align:right}
+  .deduct-row{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;padding:20px 26px;border-top:1px solid var(--line);align-items:center}
+  .deduct-row .tmi{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--navy)}
+  .deduct-row .save{text-align:right;color:var(--teal);font-weight:700;font-size:1rem}
+  .deduct-row .net{text-align:right;font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--blue)}
+  .deduct-row.highlight{background:var(--mist-2);position:relative;padding-top:30px}
+  .deduct-row.highlight::before{content:"Cas fréquent";position:absolute;left:26px;top:7px;font-family:'Mulish',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--azure)}
+  .deduct-foot{padding:16px 26px;font-size:.8rem;color:var(--soft);background:var(--mist-2);border-top:1px solid var(--line);line-height:1.5}
+  .deduct-side h3{font-size:1.4rem;margin-bottom:18px}
+  .deduct-steps{list-style:none;display:flex;flex-direction:column;gap:16px}
+  .deduct-steps li{display:flex;gap:14px;align-items:flex-start}
+  .ds-num{flex-shrink:0;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--azure));color:#fff;font-weight:700;font-size:.9rem;display:grid;place-items:center}
+  .deduct-steps h4{font-family:'Mulish',sans-serif;font-weight:700;font-size:1rem;margin-bottom:2px;color:var(--navy)}
+  .deduct-steps p{font-size:.92rem;color:var(--soft)}
+  .deduct-note{margin-top:22px;background:rgba(28,155,142,.1);border:1px solid rgba(28,155,142,.3);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--navy)}
+  @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
+
   /* testimonials */
   .quotes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   .quote{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:34px}
@@ -278,6 +301,7 @@
       <a href="#programme">Le programme</a>
       <a href="#pourqui">Pour qui</a>
       <a href="#format">Format</a>
+      <a href="#financement">Financement</a>
       <a href="#tarif">Tarif</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -438,6 +462,35 @@
   </div>
 </section>
 
+<!-- DEDUCTIBILITE BNC -->
+<section class="block deduct" id="financement">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Un investissement, pas une dépense</span>
+      <h2>Une formation <em>déductible</em> de votre BNC</h2>
+      <p>Pour un professionnel de santé en libéral, le coût de la formation est une charge professionnelle déductible de votre bénéfice non commercial (BNC). Son coût réel est donc nettement inférieur au prix affiché.</p>
+    </div>
+    <div class="deduct-grid">
+      <div class="deduct-table-card reveal">
+        <div class="deduct-table-head"><span>Tranche d'imposition (TMI)</span><span>Économie d'impôt</span><span>Coût réel</span></div>
+        <div class="deduct-row"><span class="tmi">30 %</span><span class="save">− 450 €</span><span class="net">1 050 €</span></div>
+        <div class="deduct-row highlight"><span class="tmi">41 %</span><span class="save">− 615 €</span><span class="net">885 €</span></div>
+        <div class="deduct-row"><span class="tmi">45 %</span><span class="save">− 675 €</span><span class="net">825 €</span></div>
+        <p class="deduct-foot">Calcul indicatif sur la base d'un prix de 1 500 € déduit de votre résultat imposable. L'économie réelle dépend de votre tranche marginale d'imposition et de votre situation — à confirmer avec votre expert-comptable.</p>
+      </div>
+      <div class="deduct-side reveal" data-d="1">
+        <h3>Comment ça fonctionne ?</h3>
+        <ul class="deduct-steps">
+          <li><span class="ds-num">1</span><div><h4>Vous réglez 1 500 €</h4><p>Réglés par vous, votre centre de santé ou un prestataire qui vous prend en charge.</p></div></li>
+          <li><span class="ds-num">2</span><div><h4>Vous la déduisez de votre BNC</h4><p>La dépense vient en déduction de votre bénéfice non commercial imposable.</p></div></li>
+          <li><span class="ds-num">3</span><div><h4>Vous payez moins d'impôt</h4><p>Votre résultat baisse de 1 500 € : votre impôt diminue d'autant, selon votre tranche.</p></div></li>
+        </ul>
+        <div class="deduct-note">💡 La déduction réduit aussi l'assiette de vos cotisations sociales : l'économie totale peut être supérieure aux montants ci-dessus.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="block pricing" id="tarif">
   <div class="wrap">
@@ -528,6 +581,7 @@
       </a>
       <div class="foot-links">
         <a href="#programme">Programme</a>
+        <a href="#financement">Financement</a>
         <a href="#tarif">Tarif</a>
         <a href="#contact">Contact</a>
         <a href="#">Mentions légales</a>
