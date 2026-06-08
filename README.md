@@ -23,7 +23,7 @@ Ouvrir `index.html` dans un navigateur — c'est tout.
 - 💳 **Paiement** : la fonction `goPay()` est un placeholder — y brancher votre lien Stripe
 - 📬 **Contact** : e-mail, téléphone et traitement du formulaire (actuellement sans back-end)
 - 💬 **Témoignages** : remplacer les exemples par de vrais retours
-- 📚 **Programme** : aligner les modules sur le déroulé pédagogique officiel si besoin
+- ⏱️ **Durées des modules** : la somme des 8 modules du déroulé officiel donne 44h — à harmoniser avec le total « 40h » affiché
 
 ## Conformité
 
