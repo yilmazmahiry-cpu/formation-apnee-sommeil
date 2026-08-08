@@ -99,6 +99,9 @@
   .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
   .hero-note{margin-top:24px;display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--soft)}
   .hero-note svg{width:18px;height:18px;color:var(--teal);flex-shrink:0}
+  .hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .hero-chip{display:inline-flex;align-items:center;gap:7px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.83rem;font-weight:600;color:var(--navy);box-shadow:0 1px 3px rgba(10,35,66,.06)}
+  .hero-chip svg{width:14px;height:14px;color:var(--gold-deep);flex-shrink:0}
 
   .hero-card{
     background:var(--white);border:1px solid var(--line);border-radius:24px;
@@ -405,9 +408,9 @@
   </svg>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow reveal">Formation certifiante · 40 heures · Réservée aux professionnels de santé</span>
-      <h1 class="reveal" data-d="1">Diagnostiquez et prescrivez <em>vous-même</em> le traitement de l'apnée du sommeil.</h1>
-      <p class="lead reveal" data-d="2">Grâce à cette formation certifiante de 40 heures, prenez en charge vos patients du dépistage à la prescription de la PPC et de l'orthèse — dans le cadre de l'arrêté du 13 décembre 2017 — sans les adresser systématiquement au pneumologue.</p>
+      <span class="eyebrow reveal">Formation certifiante · Agréée DPC · Professionnels de santé</span>
+      <h1 class="reveal" data-d="1">Diagnostiquez, prescrivez et suivez l'apnée du sommeil <em>en toute autonomie</em>.</h1>
+      <p class="lead reveal" data-d="2">Une formation certifiante de 40 heures, 100&nbsp;% en ligne, pour prendre en charge vous-même la PPC et l'orthèse d'avancée mandibulaire — sans adresser systématiquement vos patients au pneumologue.</p>
       <div class="hero-cta reveal" data-d="3">
         <button class="btn btn-primary" onclick="goPay()">
           S'inscrire à la formation
@@ -415,9 +418,11 @@
         </button>
         <a href="#contact" class="btn btn-ghost">Demander des informations</a>
       </div>
-      <div class="hero-note reveal" data-d="4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-        Organisme certifié Qualiopi &amp; agréé DPC · coût déductible au titre de la formation professionnelle
+      <div class="hero-chips reveal" data-d="4">
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100&nbsp;% en ligne, à votre rythme</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Attestation officielle DPC</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Certifié Qualiopi &amp; agréé DPC</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Satisfait ou remboursé 14 j</span>
       </div>
     </div>
     <div class="hero-card reveal" data-d="2">
