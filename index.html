@@ -262,6 +262,17 @@
   .sf-body h4{font-family:'Mulish',sans-serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:3px}
   .sf-body p{font-size:.95rem;color:var(--soft);line-height:1.55}
   @media(max-width:560px){.sf-item{gap:16px}.sf-num{width:38px;height:38px;font-size:1.05rem}.sf-item:not(:last-child)::before{left:18px;top:42px}}
+
+  /* pourquoi Somnéa */
+  .why{background:var(--white)}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .why-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;transition:box-shadow .25s,transform .25s}
+  .why-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+  .why-card.accent{border-color:var(--azure);box-shadow:0 10px 28px rgba(45,140,208,.14)}
+  .why-ico{width:50px;height:50px;border-radius:13px;background:var(--mist);display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px}
+  .why-card h3{font-size:1.1rem;margin-bottom:7px}
+  .why-card p{font-size:.94rem;color:var(--soft);line-height:1.55}
+  .why-card .big{font-family:'Fraunces',serif;color:var(--blue);font-weight:600}
   @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
 
   /* testimonials */
@@ -548,6 +559,39 @@
         <div class="stars">★★★★★</div>
         <p>« Le module sur le cadre de prescription est exactement ce qu'il me manquait. Le format en ligne s'adapte parfaitement à mon emploi du temps. »</p>
         <div class="who"><span class="av">CD</span><div><div class="n">[Exemple]</div><div class="r">Chirurgien-dentiste</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI SOMNEA -->
+<section class="block why" id="pourquoi-somnea">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Pourquoi Somnéa</span>
+      <h2>La formation la plus complète, au meilleur prix</h2>
+      <p>À certification équivalente, Somnéa va plus loin sur la pédagogie et l'accompagnement — pour un tarif nettement plus accessible que le reste du marché.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card accent reveal">
+        <div class="why-ico">💶</div>
+        <h3>Le meilleur rapport qualité-prix</h3>
+        <p>La même formation certifiante de 40 h à <span class="big">1 500 €</span>, là où des formations équivalentes dépassent souvent 2 000 €.</p>
+      </div>
+      <div class="why-card reveal" data-d="1">
+        <div class="why-ico">📚</div>
+        <h3>Une pédagogie plus concrète</h3>
+        <p>Plus de 30 cas cliniques commentés et des tracés PG/PSG réels annotés — pas seulement des diapositives.</p>
+      </div>
+      <div class="why-card reveal" data-d="2">
+        <div class="why-ico">⚡</div>
+        <h3>Rentabilisée plus vite</h3>
+        <p>Un tarif maîtrisé, c'est un amortissement dès le <span class="big">9ᵉ patient</span> — avant vos confrères.</p>
+      </div>
+      <div class="why-card reveal" data-d="3">
+        <div class="why-ico">🧭</div>
+        <h3>Accompagné jusqu'à la validation</h3>
+        <p>Un parcours DPC clair, étape par étape, jusqu'à la validation officielle par le CNOM.</p>
       </div>
     </div>
   </div>
