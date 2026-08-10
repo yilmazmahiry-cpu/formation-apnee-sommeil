@@ -223,13 +223,15 @@
   .ds-num{flex-shrink:0;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--azure));color:#fff;font-weight:700;font-size:.9rem;display:grid;place-items:center}
   .deduct-steps h4{font-family:'Mulish',sans-serif;font-weight:700;font-size:1rem;margin-bottom:2px;color:var(--navy)}
   .deduct-steps p{font-size:.92rem;color:var(--soft)}
-  .deduct-note{margin-top:22px;background:rgba(198,161,91,.1);border:1px solid rgba(198,161,91,.3);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--navy)}
+  .deduct-note{margin-top:22px;display:flex;align-items:flex-start;gap:10px;background:rgba(198,161,91,.1);border:1px solid rgba(198,161,91,.3);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--navy);line-height:1.55}
+  .deduct-note svg{width:19px;height:19px;flex-shrink:0;margin-top:1px;color:var(--gold-deep)}
 
   /* cadre réglementaire */
   .reglem{padding:16px 0}
   .reglem-card{display:flex;gap:24px;align-items:flex-start;background:linear-gradient(150deg,var(--navy),var(--blue));color:#fff;border-radius:22px;padding:36px 40px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
   .reglem-card::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(26,74,122,.45),transparent 65%);top:-100px;right:-80px}
-  .reglem-ico{font-size:2.4rem;flex-shrink:0;position:relative;line-height:1}
+  .reglem-ico{width:56px;height:56px;flex-shrink:0;position:relative;border-radius:14px;background:rgba(198,161,91,.16);color:var(--gold);display:grid;place-items:center}
+  .reglem-ico svg{width:28px;height:28px}
   .reglem-body{position:relative}
   .reglem-body .eyebrow{color:#DFC48A}
   .reglem-body .eyebrow::before{background:#DFC48A}
@@ -275,12 +277,15 @@
   .why-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;transition:box-shadow .25s,transform .25s}
   .why-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
   .why-card.accent{border-color:var(--azure);box-shadow:0 10px 28px rgba(26,74,122,.14)}
-  .why-ico{width:50px;height:50px;border-radius:13px;background:var(--mist);display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px}
+  .why-ico{width:50px;height:50px;border-radius:13px;background:var(--mist);display:grid;place-items:center;margin-bottom:16px;color:var(--gold-deep)}
+  .why-ico svg{width:24px;height:24px}
+  .why-card.accent .why-ico{background:var(--navy);color:var(--gold)}
   .why-card h3{font-size:1.1rem;margin-bottom:7px}
   .why-card p{font-size:.94rem;color:var(--soft);line-height:1.55}
   .why-card .big{font-family:'Fraunces',serif;color:var(--blue);font-weight:600}
 
-  .price-guarantee{margin-top:14px;text-align:center;background:var(--gold-soft);border:1px solid var(--gold);color:var(--gold-deep);border-radius:10px;padding:11px 14px;font-size:.92rem;font-weight:700}
+  .price-guarantee{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);color:var(--gold-deep);border-radius:10px;padding:11px 14px;font-size:.92rem;font-weight:700}
+  .price-guarantee svg{width:17px;height:17px;flex-shrink:0}
 
   /* garanties */
   .guarantees{background:var(--navy)}
@@ -291,7 +296,8 @@
   .guar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
   .guar-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px 24px;text-align:center;transition:transform .25s,border-color .25s}
   .guar-card:hover{transform:translateY(-4px);border-color:var(--gold)}
-  .guar-ico{font-size:2rem;margin-bottom:12px}
+  .guar-ico{width:52px;height:52px;margin:0 auto 14px;border-radius:14px;background:rgba(198,161,91,.14);display:grid;place-items:center;color:var(--gold)}
+  .guar-ico svg{width:24px;height:24px}
   .guar-card h3{color:#fff;font-size:1.1rem;margin-bottom:7px}
   .guar-card p{color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.55}
   @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
@@ -423,6 +429,7 @@
         <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Attestation officielle DPC</span>
         <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Certifié Qualiopi &amp; agréé DPC</span>
         <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Satisfait ou remboursé 14 j</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Accès à vie</span>
       </div>
     </div>
     <div class="hero-card reveal" data-d="2">
@@ -509,7 +516,7 @@
 <section class="reglem" id="cadre">
   <div class="wrap">
     <div class="reglem-card reveal">
-      <div class="reglem-ico">⚖️</div>
+      <div class="reglem-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7l3-1.5L12 4l4 1.5L19 7M5 7l-2.5 6a3 3 0 005 0L5 7zM19 7l-2.5 6a3 3 0 005 0L19 7z"/></svg></div>
       <div class="reglem-body">
         <span class="eyebrow">Cadre réglementaire</span>
         <h3>Une formation ancrée dans la réglementation en vigueur</h3>
@@ -597,22 +604,22 @@
     </div>
     <div class="why-grid">
       <div class="why-card accent reveal">
-        <div class="why-ico">💶</div>
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.7 2.5 2c0 2.5-5 1.8-5 4.2 0 1.3 1.1 2.3 2.5 2.3s2.5-.7 2.5-2"/></svg></div>
         <h3>Le meilleur rapport qualité-prix</h3>
         <p>La même formation certifiante de 40 h à <span class="big">1 500 €</span>, là où des formations équivalentes dépassent souvent 2 000 €.</p>
       </div>
       <div class="why-card reveal" data-d="1">
-        <div class="why-ico">📚</div>
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H13v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H11v16h7.5c.8 0 1.5-.7 1.5-1.5v-13z"/></svg></div>
         <h3>Une pédagogie plus concrète</h3>
         <p>Plus de 30 cas cliniques commentés et des tracés PG/PSG réels annotés — pas seulement des diapositives.</p>
       </div>
       <div class="why-card reveal" data-d="2">
-        <div class="why-ico">⚡</div>
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L10 22l9-12.5h-6.5L13 2z"/></svg></div>
         <h3>Rentabilisée plus vite</h3>
         <p>Un tarif maîtrisé, c'est un amortissement dès le <span class="big">9ᵉ patient</span> — avant vos confrères.</p>
       </div>
       <div class="why-card reveal" data-d="3">
-        <div class="why-ico">🧭</div>
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></div>
         <h3>Accompagné jusqu'à la validation</h3>
         <p>Un parcours DPC clair, étape par étape, jusqu'à la validation officielle par le CNOM.</p>
       </div>
@@ -643,7 +650,7 @@
           <li><span class="ds-num">2</span><div><h4>Vous la déduisez de votre BNC</h4><p>La dépense vient en déduction de votre bénéfice non commercial imposable.</p></div></li>
           <li><span class="ds-num">3</span><div><h4>Vous payez moins d'impôt</h4><p>Votre résultat baisse de 1 500 € : votre impôt diminue d'autant, selon votre tranche.</p></div></li>
         </ul>
-        <div class="deduct-note">💡 La déduction réduit aussi l'assiette de vos cotisations sociales : l'économie totale peut être supérieure aux montants ci-dessus.</div>
+        <div class="deduct-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.5.4.8 1 .8 1.6h5.4c0-.6.3-1.2.8-1.6A6 6 0 0012 3z"/></svg> La déduction réduit aussi l'assiette de vos cotisations sociales : l'économie totale peut être supérieure aux montants ci-dessus.</div>
       </div>
     </div>
   </div>
@@ -682,10 +689,10 @@
       <p>Une formation exigeante et un engagement clair : votre satisfaction comme votre réussite sont garanties.</p>
     </div>
     <div class="guar-grid">
-      <div class="guar-card reveal"><div class="guar-ico">🛡️</div><h3>Satisfait ou remboursé</h3><p>14 jours pour vous décider. Non convaincu ? Vous êtes remboursé, simplement.</p></div>
-      <div class="guar-card reveal" data-d="1"><div class="guar-ico">♾️</div><h3>Accès à vie</h3><p>Votre formation et ses mises à jour restent accessibles sans limite de temps.</p></div>
-      <div class="guar-card reveal" data-d="2"><div class="guar-ico">🎓</div><h3>Attestation officielle</h3><p>Un certificat de participation à l'action de DPC délivré à l'issue du parcours.</p></div>
-      <div class="guar-card reveal" data-d="3"><div class="guar-ico">✅</div><h3>Conformité garantie</h3><p>Organisme certifié Qualiopi et agréé DPC, conforme à l'arrêté du 13/12/2017.</p></div>
+      <div class="guar-card reveal"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3.5v5c0 4.5-3 8.5-7 9.5-4-1-7-5-7-9.5v-5L12 3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div><h3>Satisfait ou remboursé</h3><p>14 jours pour vous décider. Non convaincu ? Vous êtes remboursé, simplement.</p></div>
+      <div class="guar-card reveal" data-d="1"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="12" r="4.5"/><circle cx="16.5" cy="12" r="4.5"/></svg></div><h3>Accès à vie</h3><p>Votre formation et ses mises à jour restent accessibles sans limite de temps.</p></div>
+      <div class="guar-card reveal" data-d="2"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/><path d="M6.5 10v5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-5"/><path d="M21 7.5V14"/></svg></div><h3>Attestation officielle</h3><p>Un certificat de participation à l'action de DPC délivré à l'issue du parcours.</p></div>
+      <div class="guar-card reveal" data-d="3"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div><h3>Conformité garantie</h3><p>Organisme certifié Qualiopi et agréé DPC, conforme à l'arrêté du 13/12/2017.</p></div>
     </div>
   </div>
 </section>
@@ -715,7 +722,7 @@
           Acheter la formation
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
-        <div class="price-guarantee">🛡️ Satisfait ou remboursé sous 14 jours</div>
+        <div class="price-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3.5v5c0 4.5-3 8.5-7 9.5-4-1-7-5-7-9.5v-5L12 3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg> Satisfait ou remboursé sous 14 jours</div>
         <p class="price-foot">Paiement sécurisé · Autofinancement (vous, votre centre de santé ou un prestataire) · Une question ? <a href="#contact" style="color:var(--blue);font-weight:600">Contactez-nous</a></p>
       </div>
     </div>
