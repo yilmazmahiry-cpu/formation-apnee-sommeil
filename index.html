@@ -386,13 +386,16 @@
     color:var(--teal);padding:14px;border-radius:10px;font-size:.93rem;font-weight:600;text-align:center;margin-top:14px}
 
   /* footer */
-  footer{background:var(--navy);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.1);padding:46px 0}
-  .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
-  .foot-grid .logo{color:#fff}
+  footer{background:var(--navy);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.1);padding:52px 0 36px;text-align:center}
+  .foot-grid{display:flex;flex-direction:column;align-items:center;gap:22px}
+  .foot-grid .logo{color:#fff;justify-content:center}
   footer a{color:rgba(255,255,255,.6);font-size:.9rem;transition:color .2s}
   footer a:hover{color:#fff}
-  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
-  .foot-copy{font-size:.84rem;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);text-align:center}
+  .foot-links{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;row-gap:10px;width:100%}
+  .foot-divider{width:44px;height:1px;background:rgba(255,255,255,.16)}
+  .foot-legal-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;row-gap:8px;width:100%;font-size:.8rem}
+  .foot-legal-links a{font-size:.8rem;opacity:.75}
+  .foot-copy{font-size:.78rem;line-height:1.7;margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
 
   /* reveal */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
@@ -897,6 +900,9 @@
         <a href="#tarif">Tarif</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-divider"></div>
+      <div class="foot-legal-links">
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="cgv.html">CGV</a>
         <a href="confidentialite.html">Confidentialité</a>
