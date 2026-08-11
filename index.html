@@ -121,6 +121,16 @@
   .hero-card-link{display:inline-block;margin-top:16px;font-size:.88rem;font-weight:700;color:var(--blue);transition:color .2s}
   .hero-card-link:hover{color:var(--azure)}
 
+  /* emplacement photo réutilisable — dépose un fichier au chemin indiqué et il remplace l'illustration automatiquement */
+  .photo-slot{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--line);aspect-ratio:4/3;background:linear-gradient(150deg,var(--mist),var(--mist-2))}
+  .photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .photo-fallback svg{width:56%;max-width:210px;color:var(--gold-deep);opacity:.55}
+  .photo-hint{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:7px;background:rgba(10,35,66,.86);color:#fff;font-size:.7rem;font-weight:600;padding:6px 12px;border-radius:8px;letter-spacing:.01em;font-family:'Mulish',sans-serif}
+  .photo-hint svg{width:13px;height:13px;flex-shrink:0;opacity:.85}
+  .hero-visual{display:flex;flex-direction:column;gap:20px}
+  .format-visual{display:flex;flex-direction:column;gap:20px}
+
   /* ---------- TRUST BAR ---------- */
   .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
   .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -432,14 +442,31 @@
         <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Accès à vie</span>
       </div>
     </div>
-    <div class="hero-card reveal" data-d="2">
-      <span class="tag">Aperçu du parcours</span>
-      <h3>8 modules · 40 heures</h3>
-      <div class="module-row"><span class="module-num">01</span><p>Comprendre &amp; dépister<span>Repérer les patients à risque</span></p></div>
-      <div class="module-row"><span class="module-num">02</span><p>Diagnostiquer<span>Polygraphie &amp; polysomnographie</span></p></div>
-      <div class="module-row"><span class="module-num">03</span><p>Traiter<span>PPC &amp; orthèse d'avancée mandibulaire</span></p></div>
-      <div class="module-row"><span class="module-num">04</span><p>Suivre &amp; fidéliser<span>Un suivi récurrent et valorisé</span></p></div>
-      <a href="#programme" class="hero-card-link">Voir le détail des 8 modules →</a>
+    <div class="hero-visual reveal" data-d="2">
+      <div class="photo-slot">
+        <img src="images/hero-medecin.jpg" alt="Médecin consultant un dossier patient" onerror="this.style.display='none'">
+        <div class="photo-fallback">
+          <svg viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+            <circle cx="110" cy="85" r="70" stroke-width="1" opacity=".3"/>
+            <rect x="40" y="45" width="140" height="90" rx="10" stroke-width="1.6"/>
+            <path d="M55 95 Q70 75 85 95 T115 95 T145 95 T165 80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="90" y="140" width="40" height="6" rx="3" stroke-width="1.4"/>
+            <path d="M175 40a10 10 0 100 20 8 8 0 010-20z" stroke-width="1.4" stroke-linejoin="round"/>
+            <circle cx="48" cy="130" r="3" fill="currentColor" stroke="none"/>
+            <circle cx="185" cy="115" r="2.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <span class="photo-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>images/hero-medecin.jpg</span>
+      </div>
+      <div class="hero-card">
+        <span class="tag">Aperçu du parcours</span>
+        <h3>8 modules · 40 heures</h3>
+        <div class="module-row"><span class="module-num">01</span><p>Comprendre &amp; dépister<span>Repérer les patients à risque</span></p></div>
+        <div class="module-row"><span class="module-num">02</span><p>Diagnostiquer<span>Polygraphie &amp; polysomnographie</span></p></div>
+        <div class="module-row"><span class="module-num">03</span><p>Traiter<span>PPC &amp; orthèse d'avancée mandibulaire</span></p></div>
+        <div class="module-row"><span class="module-num">04</span><p>Suivre &amp; fidéliser<span>Un suivi récurrent et valorisé</span></p></div>
+        <a href="#programme" class="hero-card-link">Voir le détail des 8 modules →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -559,14 +586,33 @@
         <li><span class="bene-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Formez-vous à votre rythme</h4><p>100 % en ligne, accessible sur une plateforme dédiée.</p></div></li>
       </ul>
     </div>
-    <div class="visual-panel reveal" data-d="1">
-      <span class="eyebrow">L'apnée du sommeil en France</span>
-      <h3>Une pathologie largement sous-diagnostiquée</h3>
-      <p>Des millions de personnes seraient concernées, et une large part d'entre elles ne sont ni diagnostiquées ni traitées. Les professionnels formés au dépistage jouent un rôle déterminant.</p>
-      <div class="vstat">
-        <div><div class="n">8 mod.</div><div class="l">structurés &amp; progressifs</div></div>
-        <div><div class="n">40 h</div><div class="l">de contenu certifiant</div></div>
-        <div><div class="n">∞</div><div class="l">accès à la plateforme</div></div>
+    <div class="format-visual reveal" data-d="1">
+      <div class="photo-slot">
+        <img src="images/format-etude-soir.jpg" alt="Médecin suivant la formation en ligne le soir" onerror="this.style.display='none'">
+        <div class="photo-fallback">
+          <svg viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+            <circle cx="110" cy="85" r="72" stroke-width="1" opacity=".28"/>
+            <path d="M35 120h60l8-14H43z" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M35 120h60M60 106V70a4 4 0 014-4h20a4 4 0 014 4v36" stroke-width="1.4" stroke-linejoin="round"/>
+            <rect x="110" y="95" width="70" height="46" rx="6" stroke-width="1.6"/>
+            <path d="M110 141l-8 12h86l-8-12" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M168 45a14 14 0 100 28 11 11 0 010-28z" stroke-width="1.4" stroke-linejoin="round"/>
+            <circle cx="45" cy="55" r="1.6" fill="currentColor" stroke="none"/>
+            <circle cx="60" cy="45" r="1.2" fill="currentColor" stroke="none"/>
+            <circle cx="75" cy="58" r="1.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <span class="photo-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>images/format-etude-soir.jpg</span>
+      </div>
+      <div class="visual-panel">
+        <span class="eyebrow">L'apnée du sommeil en France</span>
+        <h3>Une pathologie largement sous-diagnostiquée</h3>
+        <p>Des millions de personnes seraient concernées, et une large part d'entre elles ne sont ni diagnostiquées ni traitées. Les professionnels formés au dépistage jouent un rôle déterminant.</p>
+        <div class="vstat">
+          <div><div class="n">8 mod.</div><div class="l">structurés &amp; progressifs</div></div>
+          <div><div class="n">40 h</div><div class="l">de contenu certifiant</div></div>
+          <div><div class="n">∞</div><div class="l">accès à la plateforme</div></div>
+        </div>
       </div>
     </div>
   </div>
