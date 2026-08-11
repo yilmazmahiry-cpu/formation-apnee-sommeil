@@ -647,7 +647,7 @@
     </div>
     <div class="format-visual reveal" data-d="1">
       <div class="photo-slot">
-        <img src="images/format-etude-soir.jpg" alt="Médecin suivant la formation en ligne le soir" onerror="this.style.display='none'">
+        <img src="images/format-etude-soir.jpg" alt="Médecin suivant la formation en ligne le soir" onerror="this.style.display='none'" onload="this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.photo-hint').style.display='none'">
         <div class="photo-fallback">
           <svg viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
             <circle cx="110" cy="85" r="72" stroke-width="1" opacity=".28"/>
