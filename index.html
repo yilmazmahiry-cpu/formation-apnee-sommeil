@@ -439,10 +439,10 @@
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="btn btn-primary" onclick="goPay()">
+    <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
       S'inscrire à la formation
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </button>
+    </a>
   </div>
 </header>
 
@@ -458,10 +458,10 @@
       <h1 class="reveal" data-d="1">Diagnostiquez, prescrivez et suivez l'apnée du sommeil <em>en toute autonomie</em>.</h1>
       <p class="lead reveal" data-d="2">Une formation certifiante de 40 heures, 100&nbsp;% en ligne, pour prendre en charge vous-même la PPC et l'orthèse d'avancée mandibulaire — sans adresser systématiquement vos patients au pneumologue.</p>
       <div class="hero-cta reveal" data-d="3">
-        <button class="btn btn-primary" onclick="goPay()">
+        <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
           S'inscrire à la formation
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
+        </a>
         <a href="#contact" class="btn btn-ghost">Demander des informations</a>
       </div>
       <div class="hero-chips reveal" data-d="4">
@@ -826,10 +826,10 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Accompagnement tout au long du parcours</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Dépense déductible de votre résultat imposable (BNC)</li>
         </ul>
-        <button class="btn btn-primary" onclick="goPay()">
+        <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
           Acheter la formation
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
+        </a>
         <div class="price-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3.5v5c0 4.5-3 8.5-7 9.5-4-1-7-5-7-9.5v-5L12 3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg> Satisfait ou remboursé sous 14 jours</div>
         <p class="price-foot">Paiement sécurisé · Autofinancement (vous, votre centre de santé ou un prestataire) · Une question ? <a href="#contact" style="color:var(--blue);font-weight:600">Contactez-nous</a></p>
       </div>
@@ -946,8 +946,6 @@
   // toast helper
   function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3600);}
 
-  // payment placeholder
-  function goPay(){toast('Prototype : ce bouton mènera vers votre lien de paiement Stripe ou Dokeos.');}
 
   // contact form (no backend — prototype)
   function submitForm(e){
