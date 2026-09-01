@@ -68,6 +68,15 @@
   .btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(26,74,122,.26)}
   .btn-primary:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 12px 26px rgba(26,74,122,.34)}
   .btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+  .btn-white{background:#fff;color:var(--blue);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+  .btn-white:hover{background:var(--gold-soft);transform:translateY(-1px)}
+
+  /* bandeau CTA de bas de page */
+  .footer-cta{background:linear-gradient(135deg,var(--navy),var(--blue));padding:72px 0;text-align:center}
+  .footer-cta-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footer-cta h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.5rem);font-family:'Fraunces',serif;font-weight:600}
+  .footer-cta p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:6px}
+  .footer-cta .btn{margin-top:6px}
   .btn-ghost:hover{border-color:var(--azure);color:var(--blue)}
   .btn svg{width:16px;height:16px}
 
