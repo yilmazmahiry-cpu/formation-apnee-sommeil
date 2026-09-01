@@ -405,9 +405,6 @@
   .form-callback svg{width:20px;height:20px;color:var(--gold-deep);flex-shrink:0;margin-top:1px}
   .form-callback p{font-size:.88rem;color:var(--navy);line-height:1.5}
   .form-callback strong{color:var(--gold-deep)}
-  .consent{display:flex;gap:11px;align-items:flex-start;margin-bottom:20px}
-  .consent input{width:18px;height:18px;margin-top:3px;flex-shrink:0;accent-color:var(--blue)}
-  .consent label{font-size:.83rem;color:var(--soft);font-weight:400;line-height:1.45}
   .form .btn-primary{width:100%;justify-content:center;padding:15px}
   .form-success{display:none;background:rgba(198,161,91,.1);border:1px solid var(--teal);
     color:var(--teal);padding:14px;border-radius:10px;font-size:.93rem;font-weight:600;text-align:center;margin-top:14px}
@@ -930,10 +927,6 @@
         <select id="f-profession"><option>Médecin</option><option>Chirurgien-dentiste</option><option>Pharmacien</option><option>Autre professionnel de santé</option></select>
       </div>
       <div class="field"><label>Votre message</label><textarea id="f-message" placeholder="Votre demande d'information..."></textarea></div>
-      <div class="consent">
-        <input type="checkbox" id="rgpd">
-        <label for="rgpd">J'accepte d'être recontacté(e) au sujet de la formation et que mes données soient traitées conformément à la politique de confidentialité.</label>
-      </div>
       <button class="btn btn-primary" onclick="submitForm(event)">Envoyer ma demande</button>
       <div class="form-success" id="formSuccess">✓ Merci, votre demande a bien été envoyée. Nous revenons vers vous rapidement.</div>
     </div>
@@ -1012,7 +1005,6 @@
     const message=document.getElementById('f-message').value.trim();
 
     if(!prenom||!nom||!email){toast('Merci de renseigner au moins votre prénom, nom et e-mail.');return;}
-    if(!document.getElementById('rgpd').checked){toast('Merci de cocher la case de consentement avant d\'envoyer.');return;}
 
     const btn=e.target;
     const originalText=btn.textContent;
@@ -1043,7 +1035,6 @@
         document.getElementById('f-email').value='';
         document.getElementById('f-tel').value='';
         document.getElementById('f-message').value='';
-        document.getElementById('rgpd').checked=false;
       }else{
         toast('Une erreur est survenue. Merci de réessayer ou de nous écrire directement.');
       }
