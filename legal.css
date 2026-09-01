@@ -20,7 +20,6 @@ a{color:var(--blue)}
 
 /* content */
 main{padding:56px 0 80px}
-.lnotice{background:#FFF7ED;border:1px solid #FED7AA;color:#9A3412;border-radius:12px;padding:14px 18px;font-size:.9rem;margin-bottom:38px;line-height:1.6}
 h1.ltitle{font-size:clamp(1.9rem,4vw,2.4rem);margin-bottom:6px}
 .lupdated{color:var(--soft);font-size:.9rem;margin-bottom:38px}
 main h2{font-size:1.25rem;margin:34px 0 10px;padding-top:6px}

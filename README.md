@@ -4,8 +4,6 @@ Site de présentation de la formation certifiante **40 heures** destinée aux pr
 de santé souhaitant devenir prescripteurs dans la prise en charge de l'apnée du sommeil
 (SAHOS) : dépistage, diagnostic, PPC et orthèses d'avancée mandibulaire.
 
-> **Somnéa** est un nom provisoire — à personnaliser avec votre marque.
-
 ## Contenu
 
 - `index.html` — Site complet (page unique, tout-en-un : HTML + CSS + JS)
