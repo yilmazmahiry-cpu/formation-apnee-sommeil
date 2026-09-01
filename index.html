@@ -219,9 +219,12 @@
   .visual-panel .eyebrow::before{background:#DFC48A}
   .visual-panel h3{color:#fff;font-size:1.7rem;margin:16px 0 14px;position:relative}
   .visual-panel p{color:rgba(255,255,255,.82);font-size:1rem;position:relative}
-  .vstat{display:flex;gap:30px;margin-top:30px;position:relative}
-  .vstat div .n{font-family:'Fraunces';font-size:2rem;font-weight:600;color:#fff}
-  .vstat div .l{font-size:.84rem;color:rgba(255,255,255,.7)}
+  .vstat{display:flex;gap:22px;margin-top:30px;position:relative}
+  .vstat>div{flex:1;min-width:0}
+  .vstat div .n{font-family:'Fraunces';font-size:1.7rem;font-weight:600;color:#fff;white-space:nowrap}
+  .vstat div .l{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.35}
+  .vstat-source{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:18px;position:relative}
+  .vstat-source a{color:rgba(255,255,255,.75)}
 
   /* pricing */
   .pricing{background:var(--white);border-top:1px solid var(--line)}
@@ -262,6 +265,16 @@
   .deduct-steps p{font-size:.92rem;color:var(--soft)}
   .deduct-note{margin-top:22px;display:flex;align-items:flex-start;gap:10px;background:rgba(198,161,91,.1);border:1px solid rgba(198,161,91,.3);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--navy);line-height:1.55}
   .deduct-note svg{width:19px;height:19px;flex-shrink:0;margin-top:1px;color:var(--gold-deep)}
+
+  /* deux profils de financement */
+  .finance-paths{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto 44px}
+  .finance-path{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+  .finance-path.accent{border-color:var(--azure);box-shadow:0 10px 28px rgba(26,74,122,.1)}
+  .fp-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);background:var(--mist);padding:4px 11px;border-radius:999px;margin-bottom:12px}
+  .finance-path h3{font-size:1.15rem;margin-bottom:8px}
+  .finance-path p{font-size:.92rem;color:var(--soft);line-height:1.55}
+  .finance-path a{color:var(--blue);font-weight:700}
+  @media(max-width:700px){.finance-paths{grid-template-columns:1fr}}
 
   /* cadre réglementaire */
   .reglem{padding:16px 0}
@@ -672,13 +685,14 @@
       </div>
       <div class="visual-panel">
         <span class="eyebrow">L'apnée du sommeil en France</span>
-        <h3>Une pathologie largement sous-diagnostiquée</h3>
-        <p>Des millions de personnes seraient concernées, et une large part d'entre elles ne sont ni diagnostiquées ni traitées. Les professionnels formés au dépistage jouent un rôle déterminant.</p>
+        <h3>Une pathologie fréquente, largement sous-diagnostiquée</h3>
+        <p>Le SAHOS est reconnu par la HAS comme un facteur de risque cardiovasculaire, notamment recherché en cas d'hypertension résistante. Les professionnels formés au dépistage jouent un rôle déterminant dans la prise en charge de leurs patients.</p>
         <div class="vstat">
-          <div><div class="n">8 mod.</div><div class="l">structurés &amp; progressifs</div></div>
-          <div><div class="n">40 h</div><div class="l">de contenu certifiant</div></div>
-          <div><div class="n">∞</div><div class="l">accès à la plateforme</div></div>
+          <div><div class="n">4,9 %</div><div class="l">de la population présente des symptômes évocateurs</div></div>
+          <div><div class="n">≈ 1 sur 2</div><div class="l">n'est pas diagnostiqué parmi eux</div></div>
+          <div><div class="n">15 %</div><div class="l">seulement ont eu un enregistrement du sommeil</div></div>
         </div>
+        <p class="vstat-source">Source : <a href="https://www.santepubliquefrance.fr/sommeil/article/le-syndrome-dapnees-du-sommeil-en-france-un-syndrome-frequent-et-sous-diagnostique" target="_blank" rel="noopener">Santé publique France</a></p>
       </div>
     </div>
   </div>
@@ -745,7 +759,19 @@
     <div class="sec-head center reveal">
       <span class="eyebrow">Un investissement, pas une dépense</span>
       <h2>Une formation <em>déductible</em> de votre BNC</h2>
-      <p>Pour un professionnel de santé en libéral, le coût de la formation est une charge professionnelle déductible de votre bénéfice non commercial (BNC). Son coût réel est donc nettement inférieur au prix affiché.</p>
+      <p>Deux profils, deux façons simples de financer votre formation.</p>
+    </div>
+    <div class="finance-paths">
+      <div class="finance-path accent">
+        <span class="fp-tag">Médecin libéral</span>
+        <h3>Autofinancement direct</h3>
+        <p>Paiement par carte ou virement. Coût déductible de votre BNC au titre des charges professionnelles — voir le détail chiffré ci-dessous.</p>
+      </div>
+      <div class="finance-path">
+        <span class="fp-tag">Médecin salarié</span>
+        <h3>Prise en charge employeur</h3>
+        <p>Sollicitez votre établissement (hôpital, clinique, centre de santé, MSP) dans le cadre du plan de formation. <a href="#contact">Demandez un devis et les justificatifs nécessaires</a> — réponse sous 24h.</p>
+      </div>
     </div>
     <div class="deduct-grid">
       <div class="deduct-table-card reveal">
@@ -779,15 +805,17 @@
     <div class="renta-card reveal">
       <table class="renta-table">
         <tbody>
-          <tr><td>Prix d'une consultation</td><td class="rt-val">30 €</td></tr>
-          <tr><td>Consultations par patient <span>bilan, mise en route, suivi à 1, 3 et 12 mois et au-delà</span></td><td class="rt-val">× 6</td></tr>
-          <tr class="rt-sub"><td>Revenu par patient pris en charge</td><td class="rt-val">180 €</td></tr>
+          <tr><td>Consultation initiale <span>repérage &amp; prescription de l'examen</span></td><td class="rt-val">30 €</td></tr>
+          <tr><td>Consultation de résultats <span>mise en route du traitement</span></td><td class="rt-val">30 €</td></tr>
+          <tr><td>Suivi à 1, 3 et 12 mois <span>3 consultations la 1ère année</span></td><td class="rt-val">90 €</td></tr>
+          <tr><td>Renouvellement annuel <span>chaque année suivante</span></td><td class="rt-val">30 €</td></tr>
+          <tr class="rt-sub"><td>Revenu la 1ère année, par patient pris en charge</td><td class="rt-val">180 €</td></tr>
           <tr><td>Coût de la formation</td><td class="rt-val">1 500 €</td></tr>
           <tr class="rt-result"><td>Formation rentabilisée dès le</td><td class="rt-val">9ᵉ patient</td></tr>
           <tr class="rt-bonus"><td>Après déduction de votre BNC (coût réel ≈ 885 €)</td><td class="rt-val">dès le 5ᵉ patient</td></tr>
         </tbody>
       </table>
-      <p class="renta-foot">Au-delà, chaque patient suivi représente environ <strong>180 € de revenu récurrent</strong> par an. Calcul indicatif sur la base d'une consultation à 30 € et de 6 consultations par patient — à ajuster selon votre secteur et votre spécialité.</p>
+      <p class="renta-foot">Le SAHOS est une pathologie chronique : au-delà de la 1ère année, chaque patient revient <strong>chaque année, à vie</strong>, pour son renouvellement. Calcul indicatif sur la base d'une consultation à 30 € — à ajuster selon votre secteur et votre spécialité.</p>
     </div>
   </div>
 </section>
@@ -849,7 +877,7 @@
       <h2>Tout ce qu'il faut savoir</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal"><div class="faq-q">Comment financer la formation ?<span class="ic">+</span></div><div class="faq-a"><p>La formation est en autofinancement : elle est réglée directement par le professionnel de santé, par son centre de santé, ou par un prestataire qui accepte de la prendre en charge. S'agissant d'une dépense de formation professionnelle directement liée à votre exercice, son coût est en principe déductible de votre résultat imposable (BNC). Nous vous invitons à confirmer les modalités exactes avec votre expert-comptable.</p></div></div>
+      <div class="faq-item reveal"><div class="faq-q">Comment financer la formation ?<span class="ic">+</span></div><div class="faq-a"><p>Deux chemins possibles. En libéral : autofinancement direct, avec un coût en principe déductible de votre résultat imposable (BNC) — à confirmer avec votre expert-comptable. En tant que salarié : sollicitez la prise en charge de votre établissement dans le cadre du plan de formation ; nous vous transmettons devis et justificatifs sur simple demande via le formulaire de contact.</p></div></div>
       <div class="faq-item reveal"><div class="faq-q">Combien de temps ai-je accès au contenu ?<span class="ic">+</span></div><div class="faq-a"><p>Vous bénéficiez d'un accès à la plateforme d'apprentissage sans limite de durée, afin d'avancer à votre rythme et de revenir sur les modules quand vous le souhaitez.</p></div></div>
       <div class="faq-item reveal"><div class="faq-q">Y a-t-il des prérequis ?<span class="ic">+</span></div><div class="faq-a"><p>La formation s'adresse aux professionnels de santé. Aucune connaissance préalable spécifique sur l'apnée du sommeil n'est requise : le parcours part des fondamentaux.</p></div></div>
       <div class="faq-item reveal"><div class="faq-q">Comment se déroule la certification ?<span class="ic">+</span></div><div class="faq-a"><p>Des évaluations jalonnent le parcours. Une fois les modules validés, vous recevez une attestation de formation que vous pouvez valoriser dans votre activité.</p></div></div>
