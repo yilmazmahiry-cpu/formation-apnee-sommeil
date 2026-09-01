@@ -166,6 +166,8 @@
 
   /* ---------- SECTIONS ---------- */
   section.block{padding:104px 0}
+  /* deux sections .block qui se suivent ne cumulent pas leurs paddings (104+104=208px etait excessif) */
+  section.block + section.block{padding-top:0}
   .sec-head{max-width:640px;margin-bottom:54px}
   .sec-head h2{font-size:clamp(2rem,3.6vw,2.85rem);margin:18px 0 16px}
   .sec-head p{font-size:1.1rem;color:var(--soft)}
