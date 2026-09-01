@@ -72,11 +72,15 @@
   .btn-white:hover{background:var(--gold-soft);transform:translateY(-1px)}
 
   /* bandeau CTA de bas de page */
-  .footer-cta{background:linear-gradient(135deg,var(--navy),var(--blue));padding:72px 0;text-align:center}
-  .footer-cta-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
-  .footer-cta h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.5rem);font-family:'Fraunces',serif;font-weight:600}
+  .footer-cta{background:linear-gradient(150deg,var(--navy),var(--blue));padding:72px 0;text-align:center;position:relative;overflow:hidden}
+  .footer-cta::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.32),transparent 65%);top:-110px;right:-70px;pointer-events:none}
+  .footer-cta::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.18),transparent 65%);bottom:-100px;left:-60px;pointer-events:none}
+  .footer-cta-inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footer-cta .eyebrow{color:var(--gold)}
+  .footer-cta .eyebrow::before{background:var(--gold)}
+  .footer-cta h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.5rem);font-family:'Fraunces',serif;font-weight:600;margin-top:4px}
   .footer-cta p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:6px}
-  .footer-cta .btn{margin-top:6px}
+  .footer-cta .btn{margin-top:6px;border:1.5px solid var(--gold)}
   .btn-ghost:hover{border-color:var(--azure);color:var(--blue)}
   .btn svg{width:16px;height:16px}
 
