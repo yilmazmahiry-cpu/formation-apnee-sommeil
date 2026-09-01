@@ -23,7 +23,7 @@ Ouvrir `index.html` dans un navigateur — c'est tout.
 - 💳 **Paiement** : la fonction `goPay()` est un placeholder — y brancher votre lien Stripe
 - 📬 **Contact** : e-mail, téléphone et traitement du formulaire (actuellement sans back-end)
 - 💬 **Témoignages** : remplacer les exemples par de vrais retours
-- 🏛️ **N° de déclaration d'activité (NDA)** : renseigner le numéro réel dans le pied de page (mention « ne vaut pas agrément de l'État » déjà présente, comme l'exige la loi)
+- 🏛️ **Mentions légales / CGV** : renseigner raison sociale, SIRET et adresse réels (`mentions-legales.html`). Le NDA n'est volontairement pas affiché sur le site (choix éditorial) ; il reste néanmoins obligatoire sur vos documents commerciaux (devis, factures, CGV) au titre du Code du travail — à vérifier avec votre conseil.
 - ⏱️ **Durées des modules** : la somme des 8 modules du déroulé officiel donne 44h — à harmoniser avec le total « 40h » affiché
 
 ## Conformité
