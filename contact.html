@@ -9,6 +9,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
+<style>
+  .contact-page{max-width:600px;margin:0 auto}
+  .contact-direct{background:var(--mist-2);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;margin:28px 0;display:flex;flex-direction:column;gap:12px}
+  .contact-direct-row{display:flex;align-items:center;gap:12px;font-size:.95rem;color:var(--navy);font-weight:600}
+  .contact-direct-row svg{width:19px;height:19px;color:var(--blue);flex-shrink:0}
+  .contact-privacy{font-size:.82rem;color:var(--soft);margin-bottom:26px;line-height:1.6}
+  .contact-page .form{background:transparent;border:none;padding:0;box-shadow:none}
+  .contact-links{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);text-align:center}
+  .contact-links h3{font-size:1.05rem;margin-bottom:16px;color:var(--navy)}
+  .contact-links-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .contact-links-row a{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.86rem;font-weight:600;color:var(--navy);transition:border-color .2s,color .2s}
+  .contact-links-row a:hover{border-color:var(--azure);color:var(--blue)}
+</style>
 </head>
 <body>
 
@@ -33,21 +46,24 @@
   </div>
 </header>
 
-<section class="block contact" id="contact" style="padding-top:56px">
-  <div class="wrap split">
-    <div class="reveal">
+<section class="block" style="padding-top:56px">
+  <div class="wrap contact-page">
+    <div class="sec-head center reveal">
       <span class="eyebrow">Contact</span>
       <h2>Une question ? Parlons-en.</h2>
-      <p class="lead">Laissez-nous vos coordonnées : nous vous recontactons avec toutes les informations sur la formation et son financement.</p>
-      <ul class="contact-info">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg> contact@formationsahos.fr</li>
-      </ul>
+      <p>Laissez-nous vos coordonnées : nous vous recontactons avec toutes les informations sur la formation et son financement.</p>
     </div>
+
+    <div class="contact-direct reveal">
+      <div class="contact-direct-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg> contact@formationsahos.fr</div>
+    </div>
+
+    <div class="form-callback reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13 1 .37 1.94.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.81.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <p><strong>Envie d'être rappelé rapidement ?</strong> Laissez-nous votre numéro ci-dessous : nous vous appelons dans l'heure (aux horaires d'ouverture).</p>
+    </div>
+
     <div class="form reveal" data-d="1">
-      <div class="form-callback">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13 1 .37 1.94.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.81.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <p><strong>Envie d'être rappelé rapidement ?</strong> Laissez-nous votre numéro ci-dessous : nous vous appelons dans l'heure (aux horaires d'ouverture).</p>
-      </div>
       <div class="form-row">
         <div class="field"><label>Prénom</label><input type="text" id="f-prenom" placeholder="Votre prénom" required></div>
         <div class="field"><label>Nom</label><input type="text" id="f-nom" placeholder="Votre nom" required></div>
@@ -62,6 +78,15 @@
       <div class="field"><label>Votre message</label><textarea id="f-message" placeholder="Votre demande d'information..."></textarea></div>
       <button class="btn btn-primary" onclick="submitForm(event)">Envoyer ma demande</button>
       <div class="form-success" id="formSuccess">✓ Merci, votre demande a bien été envoyée. Nous revenons vers vous rapidement.</div>
+    </div>
+
+    <div class="contact-links reveal">
+      <h3>Avant de nous écrire, votre question est peut-être déjà traitée</h3>
+      <div class="contact-links-row">
+        <a href="faq.html">Voir la FAQ →</a>
+        <a href="tarif.html">Tarif &amp; financement →</a>
+        <a href="programme.html">Programme détaillé →</a>
+      </div>
     </div>
   </div>
 </section>
