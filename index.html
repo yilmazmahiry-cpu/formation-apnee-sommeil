@@ -378,6 +378,10 @@
     border-radius:10px;font-family:'Mulish';font-size:.97rem;color:var(--navy);background:var(--mist-2);transition:all .2s}
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--azure);background:#fff;box-shadow:0 0 0 4px rgba(26,74,122,.12)}
   .field textarea{resize:vertical;min-height:96px}
+  .form-callback{display:flex;align-items:flex-start;gap:12px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:12px;padding:14px 16px;margin-bottom:20px}
+  .form-callback svg{width:20px;height:20px;color:var(--gold-deep);flex-shrink:0;margin-top:1px}
+  .form-callback p{font-size:.88rem;color:var(--navy);line-height:1.5}
+  .form-callback strong{color:var(--gold-deep)}
   .consent{display:flex;gap:11px;align-items:flex-start;margin-bottom:20px}
   .consent input{width:18px;height:18px;margin-top:3px;flex-shrink:0;accent-color:var(--blue)}
   .consent label{font-size:.83rem;color:var(--soft);font-weight:400;line-height:1.45}
@@ -866,11 +870,18 @@
       </ul>
     </div>
     <div class="form reveal" data-d="1">
+      <div class="form-callback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13 1 .37 1.94.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.81.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <p><strong>Envie d'être rappelé rapidement ?</strong> Laissez-nous votre numéro ci-dessous : nous vous appelons dans l'heure (aux horaires d'ouverture).</p>
+      </div>
       <div class="form-row">
         <div class="field"><label>Prénom</label><input type="text" placeholder="Votre prénom"></div>
         <div class="field"><label>Nom</label><input type="text" placeholder="Votre nom"></div>
       </div>
-      <div class="field"><label>E-mail</label><input type="email" placeholder="vous@exemple.fr"></div>
+      <div class="form-row">
+        <div class="field"><label>E-mail</label><input type="email" placeholder="vous@exemple.fr"></div>
+        <div class="field"><label>Téléphone <span style="font-weight:400;color:var(--soft)">(optionnel)</span></label><input type="tel" placeholder="06 12 34 56 78"></div>
+      </div>
       <div class="field"><label>Profession</label>
         <select><option>Médecin</option><option>Chirurgien-dentiste</option><option>Pharmacien</option><option>Autre professionnel de santé</option></select>
       </div>
