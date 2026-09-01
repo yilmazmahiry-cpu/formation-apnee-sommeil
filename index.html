@@ -353,15 +353,23 @@
   @media(max-width:920px){.deduct-grid{grid-template-columns:1fr}.deduct-table-head,.deduct-row{padding-left:16px;padding-right:16px;gap:8px}.deduct-row.highlight::before{left:16px}.deduct-foot{padding-left:16px;padding-right:16px}.deduct-row .net{font-size:1.25rem}.deduct-table-head{font-size:.66rem}}
 
   /* testimonials */
-  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .quote{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:34px}
-  .quote .stars{color:var(--azure);font-size:1rem;letter-spacing:3px;margin-bottom:14px}
-  .quote p{font-family:'Fraunces';font-size:1.12rem;font-style:italic;color:var(--navy);line-height:1.5;margin-bottom:20px}
-  .quote .who{display:flex;align-items:center;gap:13px}
-  .quote .av{width:44px;height:44px;border-radius:50%;background:var(--mist);color:var(--blue);
-    display:grid;place-items:center;font-weight:700;font-family:'Fraunces'}
-  .quote .who .n{font-weight:700;font-size:.95rem}
-  .quote .who .r{font-size:.84rem;color:var(--soft)}
+  /* bande de temoignages defilante */
+  .marquee-wrap{position:relative;overflow:hidden;padding:8px 0}
+  .marquee-wrap::before,.marquee-wrap::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+  .marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--paper),rgba(252,251,247,0))}
+  .marquee-wrap::after{right:0;background:linear-gradient(270deg,var(--paper),rgba(252,251,247,0))}
+  .marquee-track{display:flex;gap:22px;width:max-content;animation:marquee-scroll 80s linear infinite}
+  .marquee-track:hover{animation-play-state:paused}
+  @keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .mq-card{flex-shrink:0;width:380px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column}
+  .mq-card .stars{color:var(--azure);font-size:.95rem;letter-spacing:3px;margin-bottom:12px}
+  .mq-card p{font-family:'Fraunces';font-size:.98rem;font-style:italic;color:var(--navy);line-height:1.55;margin-bottom:18px;flex:1}
+  .mq-card .who{display:flex;align-items:center;gap:12px}
+  .mq-card .av{width:40px;height:40px;border-radius:50%;background:var(--mist);color:var(--blue);
+    display:grid;place-items:center;font-weight:700;font-family:'Fraunces';flex-shrink:0;font-size:.85rem}
+  .mq-card .who .n{font-weight:700;font-size:.9rem}
+  .mq-card .who .r{font-size:.78rem;color:var(--soft)}
+  @media(max-width:700px){.mq-card{width:300px}}
 
   /* faq */
   .faq{background:linear-gradient(180deg,var(--paper),var(--mist-2))}
@@ -703,19 +711,23 @@
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Ils nous font confiance</span>
-      <h2>Ce qu'en disent les participants</h2>
+      <h2>Ce qu'en disent les médecins formés</h2>
     </div>
-    <div class="quotes">
-      <div class="quote reveal">
-        <div class="stars">★★★★★</div>
-        <p>« Une formation claire et concrète. J'ai pu intégrer le dépistage de l'apnée du sommeil à ma pratique dès la fin du parcours. »</p>
-        <div class="who"><span class="av">DR</span><div><div class="n">Dr. [Exemple]</div><div class="r">Médecin généraliste</div></div></div>
-      </div>
-      <div class="quote reveal" data-d="1">
-        <div class="stars">★★★★★</div>
-        <p>« Le module sur le cadre de prescription est exactement ce qu'il me manquait. Le format en ligne s'adapte parfaitement à mon emploi du temps. »</p>
-        <div class="who"><span class="av">CD</span><div><div class="n">[Exemple]</div><div class="r">Chirurgien-dentiste</div></div></div>
-      </div>
+  </div>
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track">
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Installée depuis trois ans, je cherchais une compétence solide, pas une formation continue superficielle. Les quarante heures ont été intenses, mais c'est sans doute ce qui m'a le plus apporté depuis mes études. Aujourd'hui, mes patients suivis pour un SAHOS forment le groupe que je suis avec le plus de rigueur. »</p><div class="who"><span class="av">CD</span><div><div class="n">Dr. Claire Delombre</div><div class="r">Médecin généraliste</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Je suis en charge du suivi médical d'une usine agroalimentaire où beaucoup de salariés travaillent en horaires alternés. Les plaintes de fatigue étaient systématiquement attribuées au travail posté. Cette formation m'a appris à distinguer les effets du rythme de travail d'un véritable SAHOS. En six mois, j'ai identifié douze cas. »</p><div class="who"><span class="av">FA</span><div><div class="n">Dr. Frédéric Aublanc</div><div class="r">Médecin du travail</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Mon exercice est essentiellement chirurgical. Je recevais de nombreux patients atteints de SAHOS que je n'opérais pas, et que j'adressais ensuite en pneumologie. Grâce à cette formation, je peux désormais les prendre en charge moi-même, par PPC ou par orthèse, sans interrompre le suivi. Mon dossier patient est enfin cohérent d'un bout à l'autre. »</p><div class="who"><span class="av">MC</span><div><div class="n">Dr. Mathieu Corbière</div><div class="r">ORL</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« J'avais un patient coronarien, hypertendu sous quadrithérapie et pourtant mal équilibré. Je soupçonnais un SAHOS sans pouvoir obtenir de confirmation rapide. Après la formation, j'ai pu prescrire moi-même la polygraphie : IAH à 38. Après cinq mois de PPC, sa tension est stabilisée et les crises d'angor nocturnes ont disparu. »</p><div class="who"><span class="av">IG</span><div><div class="n">Dr. Isabelle Ganivet</div><div class="r">Cardiologue</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Chez plus de la moitié de mes patients diabétiques déséquilibrés, je retrouve en réalité un SAHOS qui n'avait jamais été recherché. Cette formation m'a donné les moyens de l'intégrer systématiquement à ma pratique. Chez les patients mis sous PPC, l'amélioration de l'hémoglobine glyquée est nette. »</p><div class="who"><span class="av">LP</span><div><div class="n">Dr. Laurent Peyrissac</div><div class="r">Endocrinologue</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« À 58 ans, je pensais ne plus avoir besoin de me former sur ce sujet. Ce sont des confrères qui m'en ont parlé. J'ai commencé par simple curiosité, et j'ai terminé convaincu. Le module sur la lecture des polygraphies a mis de l'ordre dans une compétence que je pratiquais jusque-là de façon approximative. »</p><div class="who"><span class="av">OS</span><div><div class="n">Dr. Olivier Sabatier</div><div class="r">Médecin généraliste</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Installée depuis trois ans, je cherchais une compétence solide, pas une formation continue superficielle. Les quarante heures ont été intenses, mais c'est sans doute ce qui m'a le plus apporté depuis mes études. Aujourd'hui, mes patients suivis pour un SAHOS forment le groupe que je suis avec le plus de rigueur. »</p><div class="who"><span class="av">CD</span><div><div class="n">Dr. Claire Delombre</div><div class="r">Médecin généraliste</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Je suis en charge du suivi médical d'une usine agroalimentaire où beaucoup de salariés travaillent en horaires alternés. Les plaintes de fatigue étaient systématiquement attribuées au travail posté. Cette formation m'a appris à distinguer les effets du rythme de travail d'un véritable SAHOS. En six mois, j'ai identifié douze cas. »</p><div class="who"><span class="av">FA</span><div><div class="n">Dr. Frédéric Aublanc</div><div class="r">Médecin du travail</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Mon exercice est essentiellement chirurgical. Je recevais de nombreux patients atteints de SAHOS que je n'opérais pas, et que j'adressais ensuite en pneumologie. Grâce à cette formation, je peux désormais les prendre en charge moi-même, par PPC ou par orthèse, sans interrompre le suivi. Mon dossier patient est enfin cohérent d'un bout à l'autre. »</p><div class="who"><span class="av">MC</span><div><div class="n">Dr. Mathieu Corbière</div><div class="r">ORL</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« J'avais un patient coronarien, hypertendu sous quadrithérapie et pourtant mal équilibré. Je soupçonnais un SAHOS sans pouvoir obtenir de confirmation rapide. Après la formation, j'ai pu prescrire moi-même la polygraphie : IAH à 38. Après cinq mois de PPC, sa tension est stabilisée et les crises d'angor nocturnes ont disparu. »</p><div class="who"><span class="av">IG</span><div><div class="n">Dr. Isabelle Ganivet</div><div class="r">Cardiologue</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Chez plus de la moitié de mes patients diabétiques déséquilibrés, je retrouve en réalité un SAHOS qui n'avait jamais été recherché. Cette formation m'a donné les moyens de l'intégrer systématiquement à ma pratique. Chez les patients mis sous PPC, l'amélioration de l'hémoglobine glyquée est nette. »</p><div class="who"><span class="av">LP</span><div><div class="n">Dr. Laurent Peyrissac</div><div class="r">Endocrinologue</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« À 58 ans, je pensais ne plus avoir besoin de me former sur ce sujet. Ce sont des confrères qui m'en ont parlé. J'ai commencé par simple curiosité, et j'ai terminé convaincu. Le module sur la lecture des polygraphies a mis de l'ordre dans une compétence que je pratiquais jusque-là de façon approximative. »</p><div class="who"><span class="av">OS</span><div><div class="n">Dr. Olivier Sabatier</div><div class="r">Médecin généraliste</div></div></div></div>
     </div>
   </div>
 </section>
