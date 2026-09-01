@@ -28,12 +28,18 @@
       <a href="tarif.html" class="active">Tarif</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
+      <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary nav-cta-mobile">S'inscrire à la formation</a>
     </nav>
     <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
       S'inscrire à la formation
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <svg class="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
+  <div class="nav-overlay" id="navOverlay"></div>
 </header>
 
 <!-- PRICING -->
@@ -181,6 +187,15 @@
 <script>
   const header=document.getElementById('header');
   window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30));
+
+  const navToggle=document.getElementById('navToggle');
+  const navLinks=document.querySelector('.nav-links');
+  const navOverlay=document.getElementById('navOverlay');
+  function closeNav(){navToggle.classList.remove('open');navLinks.classList.remove('open');navOverlay.classList.remove('open');document.body.style.overflow='';navToggle.setAttribute('aria-expanded','false');}
+  function openNav(){navToggle.classList.add('open');navLinks.classList.add('open');navOverlay.classList.add('open');document.body.style.overflow='hidden';navToggle.setAttribute('aria-expanded','true');}
+  navToggle.addEventListener('click',()=>{navToggle.classList.contains('open')?closeNav():openNav();});
+  navOverlay.addEventListener('click',closeNav);
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   window.addEventListener('load',()=>document.querySelectorAll('.reveal').forEach(el=>{
