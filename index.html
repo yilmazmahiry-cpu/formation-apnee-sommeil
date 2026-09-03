@@ -1,507 +1,668 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formation Apnée du Sommeil 40h — Prescription PPC & OAM</title>
-  <meta name="description" content="Formation certifiante de 40h pour les médecins souhaitant prescrire la PPC et l'OAM dans le traitement du SAHOS. 100% en ligne, à votre rythme. Conforme HAS / SFRMS / AASM." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somnéa — Formation certifiante en apnée du sommeil</title>
+<meta name="description" content="Formation certifiante de 40 heures pour les professionnels de santé : devenez prescripteur dans la prise en charge de l'apnée du sommeil.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="logo">
-        <span class="logo-icon">🫁</span>
-        <span class="logo-text">SomnoFormation<span class="logo-dot">.</span></span>
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>
+      </span>
+      Somnéa
+    </a>
+    <nav class="nav-links">
+      <a href="programme.html">Programme</a>
+      <a href="avis.html">Avis</a>
+      <a href="#pourqui">Pour qui</a>
+      <a href="tarif.html">Tarif</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary nav-cta-mobile">S'inscrire à la formation</a>
+    </nav>
+    <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
+      S'inscrire à la formation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <svg class="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <svg class="breath" viewBox="0 0 1440 240" preserveAspectRatio="none">
+    <path d="M0,120 Q120,120 180,120 T320,120 Q360,40 400,120 T480,120 Q520,200 560,120 T700,120 Q760,120 1440,120"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal">Formation certifiante · Agréée DPC · Professionnels de santé</span>
+      <h1 class="reveal" data-d="1">Diagnostiquez, prescrivez et suivez l'apnée du sommeil <em>en toute autonomie</em>.</h1>
+      <p class="lead reveal" data-d="2">Une formation certifiante de 40 heures, 100&nbsp;% en ligne, pour prendre en charge vous-même la PPC et l'orthèse d'avancée mandibulaire — <strong>sans adresser systématiquement vos patients au pneumologue</strong>.</p>
+      <div class="hero-urgency reveal" data-d="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p><strong>Vous le savez déjà :</strong> un rendez-vous en centre du sommeil, c'est souvent plusieurs mois d'attente pour votre patient. Une fois formé, c'est vous qui dépistez, diagnostiquez et traitez — sans ce délai.</p>
       </div>
-      <ul class="nav-links">
-        <li><a href="#programme">Programme</a></li>
-        <li><a href="#parcours">Parcours</a></li>
-        <li><a href="#tarif">Tarif</a></li>
+      <div class="hero-cta reveal" data-d="3">
+        <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
+          S'inscrire à la formation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-ghost">Demander des informations</a>
+      </div>
+      <div class="hero-chips reveal" data-d="4">
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100&nbsp;% en ligne, à votre rythme</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Attestation officielle</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Certifié Qualiopi &amp; agréé DPC</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Accès immédiat après paiement</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Accès à vie</span>
+        <span class="hero-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Paiement en plusieurs fois sans frais</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal" data-d="2">
+      <div class="platform-mockup">
+        <div class="mockup-chrome">
+          <span class="mockup-dot" style="background:#ED6A5E"></span>
+          <span class="mockup-dot" style="background:#F4BF4F"></span>
+          <span class="mockup-dot" style="background:#61C454"></span>
+          <span class="mockup-url">app.somnea-formation.fr</span>
+        </div>
+        <div class="mockup-screen">
+          <div class="mockup-sidebar">
+            <div class="mockup-brand"><span class="dot"></span>Somnéa</div>
+            <div class="mockup-mod"><span class="mockup-check done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>01 · Bases du sommeil</div>
+            <div class="mockup-mod"><span class="mockup-check done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>02 · Le SAHOS en pratique</div>
+            <div class="mockup-mod active"><span class="mockup-check active">3</span>03 · Examens diagnostiques</div>
+            <div class="mockup-mod"><span class="mockup-check todo">4</span>04 · Stratégies thérapeutiques</div>
+            <div class="mockup-mod"><span class="mockup-check todo">5</span>05 · Mise en route PPC</div>
+            <div class="mockup-mod"><span class="mockup-check todo">6</span>06 · Orthèses (OAM)</div>
+            <div class="mockup-mod"><span class="mockup-check todo">7</span>07 · Cas cliniques</div>
+            <div class="mockup-mod"><span class="mockup-check todo">8</span>08 · Évaluation finale</div>
+          </div>
+          <div class="mockup-main">
+            <span class="mockup-eyebrow">Module 03 · Examens diagnostiques</span>
+            <h4>Polygraphie &amp; Polysomnographie</h4>
+            <div class="mockup-trace">
+              <svg viewBox="0 0 300 128" preserveAspectRatio="none">
+                <line x1="0" y1="22" x2="300" y2="22" stroke="#E6E2D6" stroke-width=".6"/>
+                <line x1="0" y1="48" x2="300" y2="48" stroke="#E6E2D6" stroke-width=".6"/>
+                <line x1="0" y1="76" x2="300" y2="76" stroke="#E6E2D6" stroke-width=".6"/>
+                <line x1="0" y1="104" x2="300" y2="104" stroke="#E6E2D6" stroke-width=".6"/>
+                <rect x="150" y="2" width="48" height="122" fill="#C6A15B" opacity=".14"/>
+                <line x1="150" y1="2" x2="150" y2="124" stroke="#C6A15B" stroke-width="1" stroke-dasharray="2 2" opacity=".6"/>
+                <line x1="198" y1="2" x2="198" y2="124" stroke="#C6A15B" stroke-width="1" stroke-dasharray="2 2" opacity=".6"/>
+                <text x="174" y="14" text-anchor="middle" font-family="Mulish, sans-serif" font-size="6.5" font-weight="700" fill="#B8894B">APNÉE</text>
+                <text x="4" y="19" font-family="Mulish, sans-serif" font-size="7" fill="#59677A">Débit</text>
+                <path d="M34,22 q6,-8 12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 L198,22 q7,-13 14,0 t14,0 t14,0 t14,0 t14,0 t14,0 t14,0" fill="none" stroke="#2F6FA8" stroke-width="1.6" stroke-linecap="round"/>
+                <text x="4" y="45" font-family="Mulish, sans-serif" font-size="7" fill="#59677A">SpO₂</text>
+                <path d="M34,48 L150,48 q10,4 16,10 t10,8 L214,66 q10,-2 16,-8 t18,-6 L296,48" fill="none" stroke="#C6A15B" stroke-width="1.6" stroke-linecap="round"/>
+                <text x="4" y="73" font-family="Mulish, sans-serif" font-size="7" fill="#59677A">Ronfl.</text>
+                <path d="M60,76 l4,-5 4,7 4,-6 4,6 4,-5 4,6 4,-6 4,5 4,-6 4,6 4,-5 4,6 4,-6 4,5 4,-6 4,6 4,-5 M210,76 l4,-5 4,7 4,-6 4,6 4,-5 4,6 4,-6 4,5 4,-6 4,6 4,-5 4,6 4,-6 4,5 4,-6 4,6 4,-5" fill="none" stroke="#0A2342" stroke-width="1.3" stroke-linecap="round" opacity=".5"/>
+                <text x="4" y="101" font-family="Mulish, sans-serif" font-size="7" fill="#59677A">Position</text>
+                <path d="M34,104 L120,104 L120,98 L296,98" fill="none" stroke="#59677A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+              </svg>
+            </div>
+            <div class="mockup-progress-track"><div class="mockup-progress-fill"></div></div>
+            <div class="mockup-progress-row"><span>68 % terminé</span><span class="mockup-btn">Continuer →</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <span class="tag">Aperçu du parcours</span>
+        <h3>8 modules · 40 heures</h3>
+        <div class="module-row"><span class="module-num">01</span><p>Comprendre &amp; dépister<span>Repérer les patients à risque</span></p></div>
+        <div class="module-row"><span class="module-num">02</span><p>Diagnostiquer<span>Polygraphie &amp; polysomnographie</span></p></div>
+        <div class="module-row"><span class="module-num">03</span><p>Traiter<span>PPC &amp; orthèse d'avancée mandibulaire</span></p></div>
+        <div class="module-row"><span class="module-num">04</span><p>Suivre &amp; fidéliser<span>Un suivi récurrent et valorisé</span></p></div>
+        <a href="programme.html" class="hero-card-link">Voir le détail des 8 modules →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item reveal"><div class="num">40 h</div><div class="lbl">de formation certifiante</div></div>
+    <div class="trust-item reveal" data-d="1"><div class="num">100 %</div><div class="lbl">en ligne, à votre rythme</div></div>
+    <div class="trust-item reveal" data-d="2"><div class="num">DPC</div><div class="lbl">organisme agréé ANDPC</div></div>
+    <div class="trust-item reveal" data-d="3"><div class="num">Qualiopi</div><div class="lbl">organisme certifié</div></div>
+  </div>
+</div>
+
+<!-- POUR QUI -->
+<section class="block" id="pourqui">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">À qui s'adresse la formation</span>
+      <h2>Conçue pour les professionnels de santé</h2>
+      <p>Pensée d'abord pour les <strong>médecins prescripteurs</strong>, elle s'ouvre à tous les acteurs du parcours de l'apnée du sommeil — chacun selon son rôle.</p>
+    </div>
+    <div class="cards">
+      <div class="card primary reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7 7-7z"/></svg></div>
+        <span class="card-tag">Prescripteurs</span>
+        <h3>Médecins</h3>
+        <p>Généralistes, ORL, pneumologues, cardiologues, neurologues… Diagnostiquez, prescrivez la PPC et l'orthèse, et suivez vos patients en toute autonomie.</p>
+      </div>
+      <div class="card reveal" data-d="1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5.5c-2-2-5-2-6.5 0C4 7 4.5 10 6 14c.8 2.2 1 5 2.5 5s1.5-3 3.5-3 2 3 3.5 3 1.7-2.8 2.5-5c1.5-4 2-7 .5-8.5-1.5-2-4.5-2-6.5 0z"/></svg></div>
+        <span class="card-tag">Partenaire OAM</span>
+        <h3>Chirurgiens-dentistes</h3>
+        <p>Maîtrisez l'orthèse d'avancée mandibulaire : indications, parcours de fabrication, titration et contrôle de l'efficacité.</p>
+      </div>
+      <div class="card reveal" data-d="2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 9.5L9.5 4.5a3.5 3.5 0 015 5l-5 5a3.5 3.5 0 01-5-5z"/><path d="M14 9l-4 4"/></svg></div>
+        <span class="card-tag">Dépistage &amp; orientation</span>
+        <h3>Pharmaciens</h3>
+        <p>Repérez les patients à risque, accompagnez l'observance du traitement et orientez vers le bon parcours de soins.</p>
+      </div>
+      <div class="card reveal" data-d="3">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
+        <span class="card-tag">Acteurs du parcours</span>
+        <h3>Autres pros de santé</h3>
+        <p>Infirmiers, kinésithérapeutes et acteurs du sommeil impliqués dans le dépistage et le suivi coordonné des patients.</p>
+      </div>
+    </div>
+
+    <div class="specialty-row">
+      <h3 class="reveal">Quelle que soit votre spécialité</h3>
+      <div class="specialty-grid">
+        <div class="specialty-item reveal">
+          <div class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7 7-7z"/></svg></div>
+          <h4>Généraliste</h4>
+          <p>Ne perdez plus le fil de vos patients adressés en pneumologie.</p>
+        </div>
+        <div class="specialty-item reveal" data-d="1">
+          <div class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5.5c-2-2-5-2-6.5 0C4 7 4.5 10 6 14c.8 2.2 1 5 2.5 5s1.5-3 3.5-3 2 3 3.5 3 1.7-2.8 2.5-5c1.5-4 2-7 .5-8.5-1.5-2-4.5-2-6.5 0z"/></svg></div>
+          <h4>ORL</h4>
+          <p>Prenez en charge vous-même les patients que vous adressiez jusqu'ici.</p>
+        </div>
+        <div class="specialty-item reveal" data-d="2">
+          <div class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg></div>
+          <h4>Cardiologue</h4>
+          <p>Recherchez systématiquement le SAHOS chez vos patients à risque cardiovasculaire.</p>
+        </div>
+        <div class="specialty-item reveal" data-d="3">
+          <div class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h4>Endocrinologue</h4>
+          <p>Identifiez le SAHOS caché derrière un diabète déséquilibré.</p>
+        </div>
+        <div class="specialty-item reveal" data-d="4">
+          <div class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+          <h4>Médecin du travail</h4>
+          <p>Distinguez un vrai SAHOS des effets du travail posté.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME -->
+<section class="block prog" id="programme">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Le programme · 40 heures</span>
+      <h2>Un parcours complet, du dépistage à la prescription</h2>
+      <p>Huit modules progressifs qui vous mènent de la compréhension de la pathologie jusqu'à la prescription, le suivi de vos patients et la validation de vos compétences.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-marker"><span>01</span></div><div class="tl-content"><h3>Bases du sommeil &amp; physiologie respiratoire</h3><p>Physiologie du sommeil normal, régulation veille-sommeil et physiopathologie de l'obstruction des voies aériennes supérieures.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>02</span></div><div class="tl-content"><h3>Le SAHOS en pratique clinique</h3><p>Épidémiologie, tableau clinique, dépistage, conséquences multisystémiques et stratégie diagnostique.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>03</span></div><div class="tl-content"><h3>Examens diagnostiques</h3><p>Polygraphie ventilatoire et polysomnographie : indications, technique, lecture et interprétation des résultats.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>04</span></div><div class="tl-content"><h3>Stratégies thérapeutiques du SAHOS</h3><p>Algorithme décisionnel HAS, approche par endotypes et phénotypes et situations cliniques particulières.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>05</span></div><div class="tl-content"><h3>Mise en route &amp; suivi de la PPC</h3><p>Interfaces, titration, initiation, observance, télésurveillance et gestion des effets secondaires, dans le cadre de prise en charge fixé par l'arrêté du 13 décembre 2017.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>06</span></div><div class="tl-content"><h3>Orthèses d'avancée mandibulaire (OAM)</h3><p>Mécanisme d'action, indications, parcours de fabrication, titration, contrôle et suivi au long cours.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>07</span></div><div class="tl-content"><h3>Cas cliniques &amp; approche multidisciplinaire</h3><p>Interprétation de tracés PG/PSG réels et cas complexes en coordination avec l'ORL et le pneumologue.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-marker"><span>08</span></div><div class="tl-content"><h3>Évaluation finale &amp; certification</h3><p>QCM final, cas cliniques intégratifs et délivrance de l'attestation de formation 40h.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CADRE REGLEMENTAIRE -->
+<section class="reglem" id="cadre">
+  <div class="wrap">
+    <div class="reglem-card reveal">
+      <div class="reglem-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7l3-1.5L12 4l4 1.5L19 7M5 7l-2.5 6a3 3 0 005 0L5 7zM19 7l-2.5 6a3 3 0 005 0L19 7z"/></svg></div>
+      <div class="reglem-body">
+        <span class="eyebrow">Cadre réglementaire</span>
+        <h3>Une formation ancrée dans la réglementation en vigueur</h3>
+        <p>Le parcours intègre les exigences de l'<a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000036209897" target="_blank" rel="noopener">arrêté du 13 décembre 2017</a> relatif à la procédure d'inscription et aux conditions de prise en charge du dispositif médical à pression positive continue (PPC) pour le traitement de l'apnée du sommeil, ainsi que les recommandations de la HAS, de la SFRMS et de l'AASM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMARCHES DPC -->
+<section class="block dpc" id="dpc">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Après la formation</span>
+      <h2>Quelles démarches pour faire valider le parcours DPC « Sommeil » ?</h2>
+      <p>Une fois vos 40 heures réalisées, voici les étapes jusqu'à la validation officielle de votre parcours DPC « Sommeil ».</p>
+    </div>
+    <div class="steps-flow">
+      <div class="sf-item reveal"><div class="sf-num">1</div><div class="sf-body"><h4>Suivez la formation</h4><p>40 heures auprès d'un organisme agréé DPC.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">2</div><div class="sf-body"><h4>Recevez votre certificat</h4><p>L'organisme vous délivre un certificat de participation à l'action de DPC.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">3</div><div class="sf-body"><h4>Transmettez au CNP</h4><p>Adressez vos certificats (40 h) au CNP de votre spécialité ou au Collège de Médecine Générale.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">4</div><div class="sf-body"><h4>Le CNP valide</h4><p>Il établit votre attestation de parcours DPC « Sommeil ».</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">5</div><div class="sf-body"><h4>Transmettez au CNOM</h4><p>Envoyez un exemplaire de l'attestation du CNP au CNOM.</p></div></div>
+      <div class="sf-item reveal"><div class="sf-num">6</div><div class="sf-body"><h4>Validation officielle</h4><p>Le CNOM vous remet votre validation DPC « Sommeil », opposable à l'Assurance Maladie.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="block" id="format">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Pourquoi cette formation</span>
+      <h2 style="font-size:clamp(2rem,3.6vw,2.85rem);margin:18px 0">Une compétence qui change votre pratique</h2>
+      <ul class="bene-list">
+        <li><span class="bene-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Élargissez votre champ de compétences</h4><p>Maîtrisez une pathologie fréquente et sous-diagnostiquée.</p></div></li>
+        <li><span class="bene-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Une activité plus valorisée qu'une consultation classique</h4><p>Au-delà d'un acte ponctuel, la prise en charge de l'apnée du sommeil s'inscrit dans un suivi structuré — bilan, mise en route, puis contrôles à 1, 3 et 12 mois et au-delà : une activité récurrente et fidélisante, bien plus rémunératrice dans la durée qu'une consultation isolée.</p></div></li>
+        <li><span class="bene-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Améliorez la prise en charge de vos patients</h4><p>Dépistez plus tôt et orientez vers le bon traitement.</p></div></li>
+        <li><span class="bene-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Obtenez une certification reconnue</h4><p>Une attestation valorisable dans votre activité professionnelle.</p></div></li>
+        <li><span class="bene-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Formez-vous à votre rythme</h4><p>100 % en ligne, accessible sur une plateforme dédiée.</p></div></li>
       </ul>
-      <a href="#tarif" class="btn btn-nav">S'inscrire — 1 500 €</a>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="badges-row">
-        <span class="badge">Conforme HAS</span>
-        <span class="badge">SFRMS</span>
-        <span class="badge">AASM</span>
-        <span class="badge">Arrêté 13/12/2017</span>
+    <div class="format-visual reveal" data-d="1">
+      <div class="photo-slot">
+        <img src="images/format-etude-soir.jpg" alt="Médecin suivant la formation en ligne le soir" onerror="this.style.display='none'" onload="this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.photo-hint').style.display='none'">
+        <div class="photo-fallback">
+          <svg viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+            <circle cx="110" cy="85" r="72" stroke-width="1" opacity=".28"/>
+            <path d="M35 120h60l8-14H43z" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M35 120h60M60 106V70a4 4 0 014-4h20a4 4 0 014 4v36" stroke-width="1.4" stroke-linejoin="round"/>
+            <rect x="110" y="95" width="70" height="46" rx="6" stroke-width="1.6"/>
+            <path d="M110 141l-8 12h86l-8-12" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M168 45a14 14 0 100 28 11 11 0 010-28z" stroke-width="1.4" stroke-linejoin="round"/>
+            <circle cx="45" cy="55" r="1.6" fill="currentColor" stroke="none"/>
+            <circle cx="60" cy="45" r="1.2" fill="currentColor" stroke="none"/>
+            <circle cx="75" cy="58" r="1.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <span class="photo-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>images/format-etude-soir.jpg</span>
       </div>
-      <h1 class="hero-title">
-        Devenez prescripteur<br />
-        <span class="highlight">PPC & OAM</span> en 40 heures
-      </h1>
-      <p class="hero-subtitle">
-        Formation certifiante 100&nbsp;% en ligne destinée aux médecins.<br />
-        Apprenez à diagnostiquer et traiter le SAHOS à votre rythme.
-      </p>
-      <div class="hero-cta">
-        <a href="#tarif" class="btn btn-primary">Accéder à la formation — 1 500 €</a>
-        <a href="#programme" class="btn btn-ghost">Voir le programme ↓</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">40h</span>
-          <span class="stat-label">de formation</span>
+      <div class="visual-panel">
+        <span class="eyebrow">L'apnée du sommeil en France</span>
+        <h3>Une pathologie fréquente, largement sous-diagnostiquée</h3>
+        <p>Le SAHOS est reconnu par la HAS comme un facteur de risque cardiovasculaire, notamment recherché en cas d'hypertension résistante. Les professionnels formés au dépistage jouent un rôle déterminant dans la prise en charge de leurs patients.</p>
+        <div class="vstat">
+          <div><div class="n">4,9 %</div><div class="l">de la population présente des symptômes évocateurs</div></div>
+          <div><div class="n">≈ 1 sur 2</div><div class="l">n'est pas diagnostiqué parmi eux</div></div>
+          <div><div class="n">15 %</div><div class="l">seulement ont eu un enregistrement du sommeil</div></div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">8</span>
-          <span class="stat-label">modules</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">en ligne</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">Certifiante</span>
-          <span class="stat-label">avec attestation</span>
-        </div>
+        <p class="vstat-source">Source : <a href="https://www.santepubliquefrance.fr/sommeil/article/le-syndrome-dapnees-du-sommeil-en-france-un-syndrome-frequent-et-sous-diagnostique" target="_blank" rel="noopener">Santé publique France</a></p>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- POUR QUI -->
-  <section class="pourqui">
-    <div class="container">
-      <h2 class="section-title">Cette formation est faite pour vous si…</h2>
-      <div class="cards-grid-3">
-        <div class="card card-feature">
-          <div class="card-icon">🩺</div>
-          <h3>Vous êtes médecin</h3>
-          <p>Généraliste, interniste, ORL, pneumologue, cardiologue, neurologue ou psychiatre souhaitant élargir vos compétences.</p>
-        </div>
-        <div class="card card-feature">
-          <div class="card-icon">📋</div>
-          <h3>Vous voulez prescrire</h3>
-          <p>Vous souhaitez pouvoir prescrire et suivre les traitements PPC et OAM de vos patients atteints de SAHOS.</p>
-        </div>
-        <div class="card card-feature">
-          <div class="card-icon">⏱️</div>
-          <h3>Vous manquez de temps</h3>
-          <p>Vous avez besoin d'une formation flexible, accessible 24h/24, que vous pouvez suivre entre deux consultations.</p>
-        </div>
+<!-- TESTIMONIALS -->
+<section class="block" id="avis">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Ils nous font confiance</span>
+      <h2>Ce qu'en disent les médecins formés</h2>
+    </div>
+  </div>
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track">
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Installée depuis trois ans, je cherchais une compétence solide, pas une formation continue superficielle. Les quarante heures ont été intenses, mais c'est sans doute ce qui m'a le plus apporté depuis mes études. Aujourd'hui, mes patients suivis pour un SAHOS forment le groupe que je suis avec le plus de rigueur. »</p><div class="who"><span class="av">CD</span><div><div class="n">Dr. Claire Delombre</div><div class="r">Médecin généraliste</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Je suis en charge du suivi médical d'une usine agroalimentaire où beaucoup de salariés travaillent en horaires alternés. Les plaintes de fatigue étaient systématiquement attribuées au travail posté. Cette formation m'a appris à distinguer les effets du rythme de travail d'un véritable SAHOS. En six mois, j'ai identifié douze cas. »</p><div class="who"><span class="av">FA</span><div><div class="n">Dr. Frédéric Aublanc</div><div class="r">Médecin du travail</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Mon exercice est essentiellement chirurgical. Je recevais de nombreux patients atteints de SAHOS que je n'opérais pas, et que j'adressais ensuite en pneumologie. Grâce à cette formation, je peux désormais les prendre en charge moi-même, par PPC ou par orthèse, sans interrompre le suivi. Mon dossier patient est enfin cohérent d'un bout à l'autre. »</p><div class="who"><span class="av">MC</span><div><div class="n">Dr. Mathieu Corbière</div><div class="r">ORL</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« J'avais un patient coronarien, hypertendu sous quadrithérapie et pourtant mal équilibré. Je soupçonnais un SAHOS sans pouvoir obtenir de confirmation rapide. Après la formation, j'ai pu prescrire moi-même la polygraphie : IAH à 38. Après cinq mois de PPC, sa tension est stabilisée et les crises d'angor nocturnes ont disparu. »</p><div class="who"><span class="av">IG</span><div><div class="n">Dr. Isabelle Ganivet</div><div class="r">Cardiologue</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« Chez plus de la moitié de mes patients diabétiques déséquilibrés, je retrouve en réalité un SAHOS qui n'avait jamais été recherché. Cette formation m'a donné les moyens de l'intégrer systématiquement à ma pratique. Chez les patients mis sous PPC, l'amélioration de l'hémoglobine glyquée est nette. »</p><div class="who"><span class="av">LP</span><div><div class="n">Dr. Laurent Peyrissac</div><div class="r">Endocrinologue</div></div></div></div>
+      <div class="mq-card"><div class="stars">★★★★★</div><p>« À 58 ans, je pensais ne plus avoir besoin de me former sur ce sujet. Ce sont des confrères qui m'en ont parlé. J'ai commencé par simple curiosité, et j'ai terminé convaincu. Le module sur la lecture des polygraphies a mis de l'ordre dans une compétence que je pratiquais jusque-là de façon approximative. »</p><div class="who"><span class="av">OS</span><div><div class="n">Dr. Olivier Sabatier</div><div class="r">Médecin généraliste</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Installée depuis trois ans, je cherchais une compétence solide, pas une formation continue superficielle. Les quarante heures ont été intenses, mais c'est sans doute ce qui m'a le plus apporté depuis mes études. Aujourd'hui, mes patients suivis pour un SAHOS forment le groupe que je suis avec le plus de rigueur. »</p><div class="who"><span class="av">CD</span><div><div class="n">Dr. Claire Delombre</div><div class="r">Médecin généraliste</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Je suis en charge du suivi médical d'une usine agroalimentaire où beaucoup de salariés travaillent en horaires alternés. Les plaintes de fatigue étaient systématiquement attribuées au travail posté. Cette formation m'a appris à distinguer les effets du rythme de travail d'un véritable SAHOS. En six mois, j'ai identifié douze cas. »</p><div class="who"><span class="av">FA</span><div><div class="n">Dr. Frédéric Aublanc</div><div class="r">Médecin du travail</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Mon exercice est essentiellement chirurgical. Je recevais de nombreux patients atteints de SAHOS que je n'opérais pas, et que j'adressais ensuite en pneumologie. Grâce à cette formation, je peux désormais les prendre en charge moi-même, par PPC ou par orthèse, sans interrompre le suivi. Mon dossier patient est enfin cohérent d'un bout à l'autre. »</p><div class="who"><span class="av">MC</span><div><div class="n">Dr. Mathieu Corbière</div><div class="r">ORL</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« J'avais un patient coronarien, hypertendu sous quadrithérapie et pourtant mal équilibré. Je soupçonnais un SAHOS sans pouvoir obtenir de confirmation rapide. Après la formation, j'ai pu prescrire moi-même la polygraphie : IAH à 38. Après cinq mois de PPC, sa tension est stabilisée et les crises d'angor nocturnes ont disparu. »</p><div class="who"><span class="av">IG</span><div><div class="n">Dr. Isabelle Ganivet</div><div class="r">Cardiologue</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« Chez plus de la moitié de mes patients diabétiques déséquilibrés, je retrouve en réalité un SAHOS qui n'avait jamais été recherché. Cette formation m'a donné les moyens de l'intégrer systématiquement à ma pratique. Chez les patients mis sous PPC, l'amélioration de l'hémoglobine glyquée est nette. »</p><div class="who"><span class="av">LP</span><div><div class="n">Dr. Laurent Peyrissac</div><div class="r">Endocrinologue</div></div></div></div>
+      <div class="mq-card" aria-hidden="true"><div class="stars">★★★★★</div><p>« À 58 ans, je pensais ne plus avoir besoin de me former sur ce sujet. Ce sont des confrères qui m'en ont parlé. J'ai commencé par simple curiosité, et j'ai terminé convaincu. Le module sur la lecture des polygraphies a mis de l'ordre dans une compétence que je pratiquais jusque-là de façon approximative. »</p><div class="who"><span class="av">OS</span><div><div class="n">Dr. Olivier Sabatier</div><div class="r">Médecin généraliste</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI SOMNEA -->
+<section class="block why" id="pourquoi-somnea">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Pourquoi Somnéa</span>
+      <h2>La formation la plus complète, au meilleur prix</h2>
+      <p>À certification équivalente, Somnéa va plus loin sur la pédagogie et l'accompagnement — pour un tarif nettement plus accessible que le reste du marché.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card accent reveal">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.7 2.5 2c0 2.5-5 1.8-5 4.2 0 1.3 1.1 2.3 2.5 2.3s2.5-.7 2.5-2"/></svg></div>
+        <h3>Le meilleur rapport qualité-prix</h3>
+        <p>La même formation certifiante de 40 h à <span class="big">1 500 €</span>, là où des formations équivalentes dépassent souvent 2 000 €.</p>
+      </div>
+      <div class="why-card reveal" data-d="1">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H13v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H11v16h7.5c.8 0 1.5-.7 1.5-1.5v-13z"/></svg></div>
+        <h3>Une pédagogie plus concrète</h3>
+        <p>Plus de 30 cas cliniques commentés et des tracés PG/PSG réels annotés — pas seulement des diapositives.</p>
+      </div>
+      <div class="why-card reveal" data-d="2">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L10 22l9-12.5h-6.5L13 2z"/></svg></div>
+        <h3>Rentabilisée plus vite</h3>
+        <p>Un tarif maîtrisé, c'est un amortissement dès le <span class="big">9ᵉ patient</span> — avant vos confrères.</p>
+      </div>
+      <div class="why-card reveal" data-d="3">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></div>
+        <h3>Accompagné jusqu'à la validation</h3>
+        <p>Un parcours DPC clair, étape par étape, jusqu'à la validation officielle par le CNOM.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROGRAMME -->
-  <section class="programme" id="programme">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Programme détaillé</span>
-        <h2 class="section-title">8 modules — 40 heures</h2>
-        <p class="section-desc">Un parcours structuré, progressif et conforme aux 3 axes de la FST Médecine du Sommeil.</p>
+<!-- DEDUCTIBILITE BNC -->
+<section class="block deduct" id="financement">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Un investissement, pas une dépense</span>
+      <h2>Une formation <em>déductible</em> de votre BNC</h2>
+      <p>Deux profils, deux façons simples de financer votre formation.</p>
+    </div>
+    <div class="finance-paths">
+      <div class="finance-path accent">
+        <span class="fp-tag">Médecin libéral</span>
+        <h3>Autofinancement direct</h3>
+        <p>Paiement par carte ou virement. Coût déductible de votre BNC au titre des charges professionnelles — voir le détail chiffré ci-dessous.</p>
       </div>
-
-      <div class="modules-list">
-
-        <div class="module-item" data-color="blue">
-          <div class="module-header">
-            <div class="module-num">01</div>
-            <div class="module-info">
-              <h3>Bases du Sommeil et Physiologie Respiratoire</h3>
-              <span class="module-duration">4 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Le socle fondamental physiologique sur lequel repose toute la formation : sommeil normal, ventilation, obstruction des voies aériennes supérieures.</p>
-            <ul>
-              <li>Introduction : le sommeil, besoin vital et enjeu de santé publique</li>
-              <li>Neuroanatomie et neurochimie de la régulation veille-sommeil</li>
-              <li>Les stades de sommeil : classification AASM 2007</li>
-              <li>Architecture du sommeil normal : cycles, hypnogramme</li>
-              <li>Physiologie respiratoire à l'éveil</li>
-              <li>Modifications de la ventilation au cours du sommeil</li>
-              <li>Physiopathologie de l'obstruction des VAS</li>
-              <li>Du ronflement au SAHOS : le continuum</li>
-              <li>5 cas cliniques commentés + QCM d'évaluation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="teal">
-          <div class="module-header">
-            <div class="module-num">02</div>
-            <div class="module-info">
-              <h3>Syndrome d'Apnées-Hypopnées Obstructives du Sommeil</h3>
-              <span class="module-duration">6 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Le SAHOS dans sa dimension clinique globale : épidémiologie, diagnostic, conséquences, parcours patient.</p>
-            <ul>
-              <li>Épidémiologie, définitions et classification du SAHOS</li>
-              <li>Tableau clinique, dépistage et diagnostic différentiel</li>
-              <li>Conséquences multisystémiques</li>
-              <li>Stratégie diagnostique : de la suspicion à la confirmation</li>
-              <li>Arsenal thérapeutique : PPC, OAM, parcours patient</li>
-              <li>6 cas cliniques commentés + QCM d'évaluation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="green">
-          <div class="module-header">
-            <div class="module-num">03</div>
-            <div class="module-info">
-              <h3>Examens diagnostiques : Polygraphie et Polysomnographie</h3>
-              <span class="module-duration">6 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Technique, interprétation et pièges des examens du sommeil.</p>
-            <ul>
-              <li>Place des examens dans le parcours diagnostic</li>
-              <li>Polygraphie Ventilatoire (PG) — technique et lecture</li>
-              <li>Polysomnographie (PSG) — technique et lecture</li>
-              <li>Comparaison PG vs PSG : quand choisir quoi ?</li>
-              <li>Lecture et interprétation des résultats</li>
-              <li>5 cas cliniques commentés + QCM d'évaluation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="orange">
-          <div class="module-header">
-            <div class="module-num">04</div>
-            <div class="module-info">
-              <h3>Stratégies Thérapeutiques du SAHOS</h3>
-              <span class="module-duration">4 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Décision thérapeutique personnalisée guidée par les endotypes et phénotypes.</p>
-            <ul>
-              <li>Algorithme décisionnel HAS et recommandations internationales</li>
-              <li>Approche par endotypes et phénotypes</li>
-              <li>Approche multidisciplinaire (ORL, Pneumologue)</li>
-              <li>Situations cliniques particulières</li>
-              <li>Cas cliniques + QCM d'évaluation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="red">
-          <div class="module-header">
-            <div class="module-num">05</div>
-            <div class="module-info">
-              <h3>Mise en route et suivi du traitement par PPC</h3>
-              <span class="module-duration">10 heures — Module principal</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Maîtrise complète de la PPC : de la prescription initiale au suivi au long cours.</p>
-            <ul>
-              <li>Principes physiques et modes de fonctionnement</li>
-              <li>Les interfaces : masques nasaux, narinaires, faciaux</li>
-              <li>Prescription initiale et cadre réglementaire</li>
-              <li>Titration : détermination de la pression efficace</li>
-              <li>Initiation et premières semaines de traitement</li>
-              <li>Observance : stratégies et leviers</li>
-              <li>Interprétation des données de télésurveillance</li>
-              <li>Suivi à 1 mois, 3 mois, 12 mois et au long cours</li>
-              <li>Gestion des effets secondaires et de l'intolérance</li>
-              <li>Cas cliniques + QCM d'évaluation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="purple">
-          <div class="module-header">
-            <div class="module-num">06</div>
-            <div class="module-info">
-              <h3>Orthèses d'Avancée Mandibulaire (OAM)</h3>
-              <span class="module-duration">6 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Du mécanisme d'action au suivi au long cours de l'OAM.</p>
-            <ul>
-              <li>Mécanisme d'action et types d'OAM</li>
-              <li>Indications, contre-indications et bilan pré-thérapeutique</li>
-              <li>Parcours OAM : prescription, fabrication, titration</li>
-              <li>Examen de contrôle et évaluation de l'efficacité</li>
-              <li>Effets secondaires et suivi au long cours</li>
-              <li>Cas cliniques + QCM d'évaluation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="navy">
-          <div class="module-header">
-            <div class="module-num">07</div>
-            <div class="module-info">
-              <h3>Cas Cliniques approfondis & Approche Multidisciplinaire</h3>
-              <span class="module-duration">6 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Mise en application transversale : cas cliniques complexes et interprétation de tracés réels.</p>
-            <ul>
-              <li>Interprétation de 8 tracés PG commentés</li>
-              <li>Interprétation de 8 tracés PSG commentés</li>
-              <li>10 cas cliniques multidisciplinaires complexes (ORL + Pneumologue)</li>
-              <li>QCM d'évaluation (10 questions)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="module-item" data-color="gold">
-          <div class="module-header">
-            <div class="module-num">08</div>
-            <div class="module-info">
-              <h3>Évaluation Finale & Validation du Parcours 40h</h3>
-              <span class="module-duration">2 heures</span>
-            </div>
-            <button class="module-toggle" aria-expanded="false">+</button>
-          </div>
-          <div class="module-body">
-            <p>Module terminal de validation des compétences couvrant l'ensemble des 7 modules.</p>
-            <ul>
-              <li>Épreuve écrite : QCM final (40 questions)</li>
-              <li>Épreuve pratique : 3 cas cliniques intégratifs</li>
-              <li>Synthèse des acquis et délivrance de l'attestation de formation</li>
-            </ul>
-          </div>
-        </div>
-
+      <div class="finance-path">
+        <span class="fp-tag">Médecin salarié</span>
+        <h3>Prise en charge employeur</h3>
+        <p>Sollicitez votre établissement (hôpital, clinique, centre de santé, MSP) dans le cadre du plan de formation. <a href="contact.html">Demandez un devis et les justificatifs nécessaires</a> — réponse sous 24h.</p>
       </div>
     </div>
-  </section>
-
-  <!-- PARCOURS -->
-  <section class="parcours" id="parcours">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Comment ça marche</span>
-        <h2 class="section-title">Votre parcours en 4 étapes</h2>
+    <div class="deduct-grid">
+      <div class="deduct-table-card reveal">
+        <div class="deduct-table-head"><span>Tranche d'imposition (TMI)</span><span>Économie d'impôt</span><span>Coût réel</span></div>
+        <div class="deduct-row"><span class="tmi">30 %</span><span class="save">− 450 €</span><span class="net">1 050 €</span></div>
+        <div class="deduct-row highlight"><span class="tmi">41 %</span><span class="save">− 615 €</span><span class="net">885 €</span></div>
+        <div class="deduct-row"><span class="tmi">45 %</span><span class="save">− 675 €</span><span class="net">825 €</span></div>
+        <p class="deduct-foot">Calcul indicatif sur la base d'un prix de 1 500 € déduit de votre résultat imposable. L'économie réelle dépend de votre tranche marginale d'imposition et de votre situation — à confirmer avec votre expert-comptable.</p>
       </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h3>Vous réglez la formation</h3>
-            <p>Paiement sécurisé par carte bancaire ou virement. Vous recevez une confirmation immédiate.</p>
-          </div>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h3>Vous recevez vos accès</h3>
-            <p>Identifiant et mot de passe envoyés par e-mail sous 24h ouvrées pour accéder à la plateforme.</p>
-          </div>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h3>Vous vous formez à votre rythme</h3>
-            <p>8 modules disponibles 24h/24, depuis n'importe quel appareil. Reprenez où vous vous êtes arrêté.</p>
-          </div>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h3>Vous obtenez votre attestation</h3>
-            <p>Après validation de l'évaluation finale, vous recevez votre attestation de formation certifiante.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBJECTIFS -->
-  <section class="objectifs">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Compétences acquises</span>
-        <h2 class="section-title">Ce que vous saurez faire à l'issue de la formation</h2>
-      </div>
-      <div class="cards-grid-2">
-        <div class="competence-card">
-          <div class="competence-icon" style="background:#EFF6FF;color:#2563EB">🔍</div>
-          <div>
-            <h3>Diagnostiquer</h3>
-            <p>Identifier les symptômes du SAHOS, prescrire et interpréter une polygraphie ou polysomnographie selon les critères HAS.</p>
-          </div>
-        </div>
-        <div class="competence-card">
-          <div class="competence-icon" style="background:#F0FDF4;color:#16A34A">💊</div>
-          <div>
-            <h3>Prescrire la PPC</h3>
-            <p>Maîtriser la prescription, la titration, le suivi et la gestion des effets secondaires du traitement par PPC.</p>
-          </div>
-        </div>
-        <div class="competence-card">
-          <div class="competence-icon" style="background:#FDF4FF;color:#9333EA">🦷</div>
-          <div>
-            <h3>Prescrire l'OAM</h3>
-            <p>Connaître les indications, orienter vers le chirurgien-dentiste et assurer le suivi de l'orthèse mandibulaire.</p>
-          </div>
-        </div>
-        <div class="competence-card">
-          <div class="competence-icon" style="background:#FFF7ED;color:#EA580C">🤝</div>
-          <div>
-            <h3>Coordonner</h3>
-            <p>Intégrer l'approche multidisciplinaire avec ORL, pneumologue, cardiologue dans une prise en charge globale du patient.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONFORMITE -->
-  <section class="conformite">
-    <div class="container conformite-inner">
-      <div class="conformite-text">
-        <span class="section-tag">Cadre réglementaire</span>
-        <h2>Une formation conforme à toutes les exigences</h2>
-        <p>Cette formation a été conçue en stricte conformité avec les référentiels nationaux et internationaux en vigueur, ainsi qu'avec l'arrêté du 13 décembre 2017 relatif à la FST Médecine du Sommeil.</p>
-        <ul class="conformite-list">
-          <li>✅ Haute Autorité de Santé (HAS)</li>
-          <li>✅ Société Française de Recherche et Médecine du Sommeil (SFRMS)</li>
-          <li>✅ American Academy of Sleep Medicine (AASM)</li>
-          <li>✅ Caisse Nationale d'Assurance Maladie (CNAM)</li>
-          <li>✅ Arrêté du 13/12/2017 — FST Médecine du Sommeil</li>
+      <div class="deduct-side reveal" data-d="1">
+        <h3>Comment ça fonctionne ?</h3>
+        <ul class="deduct-steps">
+          <li><span class="ds-num">1</span><div><h4>Vous réglez 1 500 €</h4><p>Réglés par vous, votre centre de santé ou un prestataire qui vous prend en charge.</p></div></li>
+          <li><span class="ds-num">2</span><div><h4>Vous la déduisez de votre BNC</h4><p>La dépense vient en déduction de votre bénéfice non commercial imposable.</p></div></li>
+          <li><span class="ds-num">3</span><div><h4>Vous payez moins d'impôt</h4><p>Votre résultat baisse de 1 500 € : votre impôt diminue d'autant, selon votre tranche.</p></div></li>
         </ul>
-      </div>
-      <div class="conformite-visual">
-        <div class="conf-badge">
-          <div class="conf-icon">📜</div>
-          <div class="conf-label">Formation certifiante</div>
-          <div class="conf-sub">Attestation délivrée à l'issue de l'évaluation finale</div>
-        </div>
-        <div class="conf-badge">
-          <div class="conf-icon">🏥</div>
-          <div class="conf-label">Eligible DPC</div>
-          <div class="conf-sub">Renseignez-vous auprès de votre OPCO</div>
-        </div>
+        <div class="deduct-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.5.4.8 1 .8 1.6h5.4c0-.6.3-1.2.8-1.6A6 6 0 0012 3z"/></svg> La déduction réduit aussi l'assiette de vos cotisations sociales : l'économie totale peut être supérieure aux montants ci-dessus.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TARIF -->
-  <section class="tarif" id="tarif">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Inscription</span>
-        <h2 class="section-title">Un investissement unique pour toute votre carrière</h2>
+<!-- RENTABILITE -->
+<section class="block renta" id="rentabilite">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Retour sur investissement</span>
+      <h2>Rentabilisée dès le <em>9ᵉ patient</em></h2>
+      <p>Un patient pris en charge pour une apnée du sommeil, ce n'est pas une consultation isolée : c'est un parcours de suivi récurrent. Le calcul est sans appel.</p>
+    </div>
+    <div class="renta-card reveal">
+      <table class="renta-table">
+        <tbody>
+          <tr><td>Consultation initiale <span>repérage &amp; prescription de l'examen</span></td><td class="rt-val">30 €</td></tr>
+          <tr><td>Consultation de résultats <span>mise en route du traitement</span></td><td class="rt-val">30 €</td></tr>
+          <tr><td>Suivi à 1, 3 et 12 mois <span>3 consultations la 1ère année</span></td><td class="rt-val">90 €</td></tr>
+          <tr><td>Renouvellement annuel <span>chaque année suivante</span></td><td class="rt-val">30 €</td></tr>
+          <tr class="rt-sub"><td>Revenu la 1ère année, par patient pris en charge</td><td class="rt-val">180 €</td></tr>
+          <tr><td>Coût de la formation</td><td class="rt-val">1 500 €</td></tr>
+          <tr class="rt-result"><td>Formation rentabilisée dès le</td><td class="rt-val">9ᵉ patient</td></tr>
+          <tr class="rt-bonus"><td>Après déduction de votre BNC (coût réel ≈ 885 €)</td><td class="rt-val">dès le 5ᵉ patient</td></tr>
+        </tbody>
+      </table>
+      <p class="renta-foot">Le SAHOS est une pathologie chronique : au-delà de la 1ère année, chaque patient revient <strong>chaque année, à vie</strong>, pour son renouvellement. Calcul indicatif sur la base d'une consultation à 30 € — à ajuster selon votre secteur et votre spécialité.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIES -->
+<section class="block guarantees" id="garanties">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Nos garanties</span>
+      <h2>Inscrivez-vous en toute confiance</h2>
+      <p>Une formation exigeante et un engagement clair : votre satisfaction comme votre réussite sont garanties.</p>
+    </div>
+    <div class="guar-grid">
+      <div class="guar-card reveal"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3.5v5c0 4.5-3 8.5-7 9.5-4-1-7-5-7-9.5v-5L12 3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div><h3>Paiement 100 % sécurisé</h3><p>Transactions chiffrées et traitées par Stripe — vos données bancaires ne transitent jamais par nos serveurs.</p></div>
+      <div class="guar-card reveal" data-d="1"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="12" r="4.5"/><circle cx="16.5" cy="12" r="4.5"/></svg></div><h3>Accès à vie</h3><p>Votre formation et ses mises à jour restent accessibles sans limite de temps.</p></div>
+      <div class="guar-card reveal" data-d="2"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/><path d="M6.5 10v5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-5"/><path d="M21 7.5V14"/></svg></div><h3>Attestation officielle</h3><p>Un certificat de réussite délivré à l'issue du parcours de formation.</p></div>
+      <div class="guar-card reveal" data-d="3"><div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div><h3>Conformité garantie</h3><p>Organisme certifié Qualiopi et agréé DPC, conforme à l'arrêté du 13/12/2017.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="block pricing" id="tarif">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Tarif</span>
+      <h2>Accédez à la formation complète</h2>
+    </div>
+    <div class="price-card reveal">
+      <div class="price-top">
+        <span class="eyebrow">Formation certifiante</span>
+        <h3>Apnée du sommeil · 40 heures</h3>
+        <div class="price-amount"><span class="a">1 500 €</span><span class="p">TTC · déductible au titre de la formation professionnelle</span></div>
+        <div class="price-split"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg> Paiement en plusieurs fois sans frais disponible (Klarna)</div>
       </div>
-      <div class="pricing-card">
-        <div class="pricing-left">
-          <div class="pricing-label">Formation complète</div>
-          <div class="pricing-price">1 500 <span>€</span></div>
-          <div class="pricing-vat">HT — soit 1 800 € TTC (TVA 20%)</div>
-          <a href="VOTRE_LIEN_STRIPE_ICI" class="btn btn-primary btn-large">
-            S'inscrire et payer en ligne
-          </a>
-          <p class="pricing-note">🔒 Paiement sécurisé par Stripe — CB, virement acceptés</p>
-        </div>
-        <div class="pricing-right">
-          <h3>Ce qui est inclus :</h3>
-          <ul class="pricing-features">
-            <li>✅ Accès à vie aux 8 modules (40 heures)</li>
-            <li>✅ Cas cliniques commentés (+ de 30 cas)</li>
-            <li>✅ Tracés PG et PSG annotés</li>
-            <li>✅ QCM d'entraînement par module</li>
-            <li>✅ Évaluation finale certifiante</li>
-            <li>✅ Attestation de formation nominative</li>
-            <li>✅ Accès 24h/24, 7j/7, depuis tous vos appareils</li>
-            <li>✅ Mises à jour incluses (nouvelles recommandations)</li>
-          </ul>
-        </div>
+      <div class="price-body">
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> 8 modules · 40 heures de contenu certifiant</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Accès illimité à la plateforme d'apprentissage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Évaluations &amp; certification à la clé</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Accompagnement tout au long du parcours</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Dépense déductible de votre résultat imposable (BNC)</li>
+        </ul>
+        <a href="https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00" target="_blank" rel="noopener" class="btn btn-primary">
+          S'inscrire à la formation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <div class="price-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L10 22l9-12.5h-6.5L13 2z"/></svg> Accès immédiat, dès validation du paiement</div>
+        <p class="price-foot">Paiement sécurisé · Autofinancement (vous, votre centre de santé ou un prestataire) · Une question ? <a href="contact.html" style="color:var(--blue);font-weight:600">Contactez-nous</a></p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FAQ -->
-  <section class="faq">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Questions fréquentes</h2>
+<!-- FAQ -->
+<section class="block faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Tout ce qu'il faut savoir</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><div class="faq-q">Comment financer la formation ?<span class="ic">+</span></div><div class="faq-a"><p>Deux chemins possibles. En libéral : autofinancement direct, avec un coût en principe déductible de votre résultat imposable (BNC) — à confirmer avec votre expert-comptable. En tant que salarié : sollicitez la prise en charge de votre établissement dans le cadre du plan de formation ; nous vous transmettons devis et justificatifs sur simple demande via le formulaire de contact.</p></div></div>
+      <div class="faq-item reveal"><div class="faq-q">Combien de temps ai-je accès au contenu ?<span class="ic">+</span></div><div class="faq-a"><p>Vous bénéficiez d'un accès à la plateforme d'apprentissage sans limite de durée, afin d'avancer à votre rythme et de revenir sur les modules quand vous le souhaitez.</p></div></div>
+      <div class="faq-item reveal"><div class="faq-q">Y a-t-il des prérequis ?<span class="ic">+</span></div><div class="faq-a"><p>La formation s'adresse aux professionnels de santé. Aucune connaissance préalable spécifique sur l'apnée du sommeil n'est requise : le parcours part des fondamentaux.</p></div></div>
+      <div class="faq-item reveal"><div class="faq-q">Comment se déroule la certification ?<span class="ic">+</span></div><div class="faq-a"><p>Des évaluations jalonnent le parcours. Une fois les modules validés, vous recevez une attestation de formation que vous pouvez valoriser dans votre activité.</p></div></div>
+      <div class="faq-item reveal"><div class="faq-q">L'organisme de formation est-il officiel ?<span class="ic">+</span></div><div class="faq-a"><p>Oui. Il s'agit d'un organisme de formation déclaré, certifié <strong>Qualiopi</strong> et agréé <strong>DPC</strong> auprès de l'Agence nationale du DPC (ANDPC) — autant de gages de qualité et de sérieux du parcours.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="block contact" id="contact">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Une question ? Parlons-en.</h2>
+      <p class="lead">Laissez-nous vos coordonnées : nous vous recontactons avec toutes les informations sur la formation et son financement.</p>
+      <ul class="contact-info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg> contact@formationsahos.fr</li>
+      </ul>
+    </div>
+    <div class="form reveal" data-d="1">
+      <div class="form-callback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13 1 .37 1.94.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.81.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <p><strong>Envie d'être rappelé rapidement ?</strong> Laissez-nous votre numéro ci-dessous : nous vous appelons dans l'heure (aux horaires d'ouverture).</p>
       </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">À qui s'adresse cette formation ?<span>+</span></button>
-          <div class="faq-answer">
-            <p>Cette formation est destinée aux médecins (généralistes, internistes, ORL, pneumologues, cardiologues, neurologues, psychiatres) souhaitant acquérir les compétences pour prescrire et suivre les traitements du SAHOS par PPC et OAM.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Comment accède-t-on à la plateforme après le paiement ?<span>+</span></button>
-          <div class="faq-answer">
-            <p>Après validation de votre paiement, vous recevez vos identifiants de connexion par e-mail sous 24 heures ouvrées. Vous pouvez alors accéder à la totalité du contenu immédiatement.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Combien de temps ai-je pour réaliser la formation ?<span>+</span></button>
-          <div class="faq-answer">
-            <p>Vous avez un accès à vie à la plateforme. Vous avancez strictement à votre rythme, sans contrainte de date. La progression est sauvegardée automatiquement.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">L'attestation est-elle reconnue ?<span>+</span></button>
-          <div class="faq-answer">
-            <p>Oui. La formation est conforme à l'arrêté du 13/12/2017 relatif à la FST Médecine du Sommeil et aux recommandations HAS/SFRMS/AASM. L'attestation délivrée certifie les 40 heures de formation réalisées.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">La formation est-elle finançable par mon OPCO / au titre du DPC ?<span>+</span></button>
-          <div class="faq-answer">
-            <p>Nous vous encourageons à contacter votre OPCO ou à vérifier votre éligibilité auprès du FIFPL. N'hésitez pas à nous contacter pour obtenir les justificatifs nécessaires à votre dossier de prise en charge.</p>
-          </div>
-        </div>
+      <div class="form-row">
+        <div class="field"><label>Prénom</label><input type="text" id="f-prenom" placeholder="Votre prénom" required></div>
+        <div class="field"><label>Nom</label><input type="text" id="f-nom" placeholder="Votre nom" required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>E-mail</label><input type="email" id="f-email" placeholder="vous@exemple.fr" required></div>
+        <div class="field"><label>Téléphone <span style="font-weight:400;color:var(--soft)">(optionnel)</span></label><input type="tel" id="f-tel" placeholder="06 12 34 56 78"></div>
+      </div>
+      <div class="field"><label>Profession</label>
+        <select id="f-profession"><option>Médecin</option><option>Chirurgien-dentiste</option><option>Pharmacien</option><option>Autre professionnel de santé</option></select>
+      </div>
+      <div class="field"><label>Votre message</label><textarea id="f-message" placeholder="Votre demande d'information..."></textarea></div>
+      <button class="btn btn-primary" onclick="submitForm(event)">Envoyer ma demande</button>
+      <div class="form-success" id="formSuccess">✓ Merci, votre demande a bien été envoyée. Nous revenons vers vous rapidement.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a href="#" class="logo">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+        Somnéa
+      </a>
+      <div class="foot-links">
+        <a href="programme.html">Programme</a>
+        <a href="avis.html">Avis</a>
+        <a href="tarif.html">Tarif</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-divider"></div>
+      <div class="foot-legal-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgv.html">CGV</a>
+        <a href="confidentialite.html">Confidentialité</a>
       </div>
     </div>
-  </section>
+    <div class="foot-copy">© 2026 Somnéa — Formation certifiante en apnée du sommeil.<br>Programme conçu en cohérence avec les recommandations HAS, SFRMS, AASM et l'arrêté du 13 décembre 2017 (conditions de prise en charge du traitement par PPC de l'apnée du sommeil).<br>Organisme agréé DPC et certifié Qualiopi.</div>
+  </div>
+</footer>
 
-  <!-- FOOTER CTA -->
-  <section class="footer-cta">
-    <div class="container footer-cta-inner">
-      <h2>Prêt à devenir prescripteur SAHOS ?</h2>
-      <p>Rejoignez la formation et prenez en charge vos patients dès demain.</p>
-      <a href="#tarif" class="btn btn-white">S'inscrire maintenant — 1 500 €</a>
-    </div>
-  </section>
+<div class="toast" id="toast"></div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="logo">
-        <span class="logo-icon">🫁</span>
-        <span class="logo-text">SomnoFormation<span class="logo-dot">.</span></span>
-      </div>
-      <p class="footer-legal">Formation conforme HAS / SFRMS / AASM / Arrêté du 13/12/2017 — FST Médecine du Sommeil<br />
-      © 2026 SomnoFormation. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="#">Mentions légales</a>
-        <a href="#">CGV</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-  </footer>
+<script>
+  // header scroll
+  const header=document.getElementById('header');
+  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30));
 
-  <script src="script.js"></script>
+  const navToggle=document.getElementById('navToggle');
+  const navLinks=document.querySelector('.nav-links');
+  const navOverlay=document.getElementById('navOverlay');
+  function closeNav(){navToggle.classList.remove('open');navLinks.classList.remove('open');navOverlay.classList.remove('open');document.body.style.overflow='';navToggle.setAttribute('aria-expanded','false');}
+  function openNav(){navToggle.classList.add('open');navLinks.classList.add('open');navOverlay.classList.add('open');document.body.style.overflow='hidden';navToggle.setAttribute('aria-expanded','true');}
+  navToggle.addEventListener('click',()=>{navToggle.classList.contains('open')?closeNav():openNav();});
+  navOverlay.addEventListener('click',closeNav);
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
+
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // trigger hero immediately
+  window.addEventListener('load',()=>document.querySelectorAll('.hero .reveal,.hero-card.reveal').forEach(el=>el.classList.add('in')));
+
+  // faq
+  document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+
+  // scrollspy : surbrillance de l'onglet actif pendant le défilement
+  (function(){
+    const links=[].slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    const spy=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.classList.remove('active');});
+          if(map[e.target.id])map[e.target.id].classList.add('active');
+        }
+      });
+    },{rootMargin:'-50% 0px -50% 0px',threshold:0});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)spy.observe(el);});
+  })();
+
+  // toast helper
+  function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3600);}
+
+
+  // contact form — envoi reel via Web3Forms
+  function submitForm(e){
+    e.preventDefault();
+    const prenom=document.getElementById('f-prenom').value.trim();
+    const nom=document.getElementById('f-nom').value.trim();
+    const email=document.getElementById('f-email').value.trim();
+    const tel=document.getElementById('f-tel').value.trim();
+    const profession=document.getElementById('f-profession').value;
+    const message=document.getElementById('f-message').value.trim();
+
+    if(!prenom||!nom||!email){toast('Merci de renseigner au moins votre prénom, nom et e-mail.');return;}
+
+    const btn=e.target;
+    const originalText=btn.textContent;
+    btn.disabled=true;
+    btn.textContent='Envoi en cours...';
+
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        access_key:'fcd6ac1e-e787-4e56-888e-28e8146fcb4c',
+        subject:'Nouvelle demande — Formation Apnée du Sommeil',
+        from_name:prenom+' '+nom,
+        prenom:prenom,
+        nom:nom,
+        email:email,
+        telephone:tel||'(non renseigné)',
+        profession:profession,
+        message:message||'(aucun message)'
+      })
+    }).then(r=>r.json()).then(data=>{
+      btn.disabled=false;
+      btn.textContent=originalText;
+      if(data.success){
+        document.getElementById('formSuccess').style.display='block';
+        document.getElementById('f-prenom').value='';
+        document.getElementById('f-nom').value='';
+        document.getElementById('f-email').value='';
+        document.getElementById('f-tel').value='';
+        document.getElementById('f-message').value='';
+      }else{
+        toast('Une erreur est survenue. Merci de réessayer ou de nous écrire directement.');
+      }
+    }).catch(()=>{
+      btn.disabled=false;
+      btn.textContent=originalText;
+      toast('Une erreur est survenue. Merci de réessayer ou de nous écrire directement.');
+    });
+  }
+</script>
 </body>
 </html>
