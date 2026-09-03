@@ -108,6 +108,10 @@
   .hero p.lead{font-size:1.18rem;color:var(--soft);max-width:540px;font-weight:400}
   .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
   .hero-note{margin-top:24px;display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--soft)}
+  .hero-urgency{display:flex;align-items:flex-start;gap:12px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:12px;padding:14px 18px;margin:26px 0 8px;max-width:560px}
+  .hero-urgency svg{width:20px;height:20px;color:var(--gold-deep);flex-shrink:0;margin-top:2px}
+  .hero-urgency p{font-size:.95rem;color:var(--navy);line-height:1.5}
+  .hero-urgency strong{color:var(--gold-deep)}
   .hero-note svg{width:18px;height:18px;color:var(--teal);flex-shrink:0}
   .hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
   .hero-chip{display:inline-flex;align-items:center;gap:7px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.83rem;font-weight:600;color:var(--navy);box-shadow:0 1px 3px rgba(10,35,66,.06)}
