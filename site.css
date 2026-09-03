@@ -60,13 +60,13 @@
   .nav-links a{font-size:.95rem;font-weight:500;color:var(--soft);transition:color .2s}
   .nav-links a:hover{color:var(--blue)}
   .nav-links a.active{color:var(--blue);font-weight:700}
-  .nav-links .nav-cta-mobile{display:none}
+  .nav-links .nav-cta-mobile{display:none;color:#fff}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--navy);align-items:center;justify-content:center;flex-shrink:0}
   .nav-toggle svg{width:26px;height:26px}
   .nav-toggle .ic-close{display:none}
   .nav-toggle.open .ic-menu{display:none}
   .nav-toggle.open .ic-close{display:block}
-  .nav-overlay{position:fixed;inset:0;background:rgba(10,35,66,.45);z-index:98;opacity:0;pointer-events:none;transition:opacity .3s ease}
+  .nav-overlay{position:fixed;top:0;left:0;right:0;bottom:0;height:100vh;height:100dvh;background:rgba(10,35,66,.45);z-index:98;opacity:0;pointer-events:none;transition:opacity .3s ease}
   .nav-overlay.open{opacity:1;pointer-events:auto}
   .btn{
     display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;
@@ -469,6 +469,7 @@
     .nav-links{
       display:flex;flex-direction:column;align-items:stretch;gap:0;
       position:fixed;top:0;right:0;bottom:0;width:min(320px,84vw);
+      height:100vh;height:100dvh;
       background:#fff;padding:100px 30px 30px;overflow-y:auto;
       -webkit-overflow-scrolling:touch;overscroll-behavior:contain;
       box-shadow:-10px 0 40px rgba(10,35,66,.18);
