@@ -2,6 +2,19 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<!-- Consentement (Google Consent Mode v2) : tout est refusé tant que le visiteur n'a pas choisi -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{var c=JSON.parse(localStorage.getItem('somnea_consent_v1')||'null');if(c&&Date.now()-c.ts<15552000000){var a=c.ads?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:a,ad_user_data:a,ad_personalization:a});}}catch(e){}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKT38CDW');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Formation Apnée du Sommeil | Somnéa</title>
 <meta name="description" content="Une question sur la formation ou son financement ? Écrivez-nous ou laissez votre numéro pour être rappelé sous l'heure.">
@@ -25,8 +38,13 @@
   .contact-links-row a{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.86rem;font-weight:600;color:var(--navy);transition:border-color .2s,color .2s}
   .contact-links-row a:hover{border-color:var(--azure);color:var(--blue)}
 </style>
+<link rel="stylesheet" href="consent.css">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKT38CDW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header id="header">
   <div class="wrap nav">
@@ -123,6 +141,7 @@
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="cgv.html">CGV</a>
         <a href="confidentialite.html">Confidentialité</a>
+        <a href="#" data-cookie-settings>Gérer mes cookies</a>
       </div>
     </div>
     <div class="foot-copy">© 2026 Somnéa — Formation certifiante en apnée du sommeil.<br>Programme conçu en cohérence avec les recommandations HAS, SFRMS, AASM et l'arrêté du 13 décembre 2017 (conditions de prise en charge du traitement par PPC de l'apnée du sommeil).<br>Organisme agréé DPC et certifié Qualiopi.</div>
@@ -202,5 +221,6 @@
     });
   }
 </script>
+<script src="consent.js" defer></script>
 </body>
 </html>
