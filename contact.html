@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=5">
+<link rel="stylesheet" href="site.css?v=6">
 <style>
   .contact-page{max-width:600px;margin:0 auto}
   .contact-direct{background:var(--mist-2);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;margin:28px 0;display:flex;flex-direction:column;gap:12px}
@@ -107,6 +107,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <select id="f-profession"><option>Médecin</option><option>Chirurgien-dentiste</option><option>Pharmacien</option><option>Autre professionnel de santé</option></select>
       </div>
       <div class="field"><label>Votre message</label><textarea id="f-message" placeholder="Votre demande d'information..."></textarea></div>
+      <label class="robot-check"><input type="checkbox" id="f-robot"><span>Je ne suis pas un robot</span></label>
+      <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off"></label></div>
       <button class="btn btn-primary" onclick="submitForm(event)">Envoyer ma demande</button>
       <div class="form-success" id="formSuccess">✓ Merci, votre demande a bien été envoyée. Nous revenons vers vous rapidement.</div>
     </div>
@@ -172,6 +174,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3600);}
 
+  const pageOpened=Date.now();
+
   function submitForm(e){
     e.preventDefault();
     const prenom=document.getElementById('f-prenom').value.trim();
@@ -182,6 +186,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const message=document.getElementById('f-message').value.trim();
 
     if(!prenom||!nom||!email){toast('Merci de renseigner au moins votre prénom, nom et e-mail.');return;}
+
+    // Piège à robots : le champ caché n'est jamais rempli par un humain
+    if(document.getElementById('f-website').value){document.getElementById('formSuccess').style.display='block';return;}
+    if(!document.getElementById('f-robot').checked){toast('Merci de cocher la case « Je ne suis pas un robot ».');return;}
+    if(Date.now()-pageOpened<3000){toast('Merci de patienter quelques secondes, puis réessayez.');return;}
 
     const btn=e.target;
     const originalText=btn.textContent;
@@ -205,6 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }).then(r=>r.json()).then(data=>{
       btn.disabled=false;
       btn.textContent=originalText;
+      document.getElementById('f-robot').checked=false;
       if(data.success){
         document.getElementById('formSuccess').style.display='block';
         document.getElementById('f-prenom').value='';
@@ -218,6 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }).catch(()=>{
       btn.disabled=false;
       btn.textContent=originalText;
+      document.getElementById('f-robot').checked=false;
       toast('Une erreur est survenue. Merci de réessayer ou de nous écrire directement.');
     });
   }

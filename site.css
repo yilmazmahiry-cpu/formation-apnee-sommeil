@@ -435,6 +435,9 @@
   .form-callback p{font-size:.88rem;color:var(--navy);line-height:1.5}
   .form-callback strong{color:var(--gold-deep)}
   .form .btn-primary{width:100%;justify-content:center;padding:15px}
+  .robot-check{display:flex;align-items:center;gap:12px;margin-bottom:17px;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;background:var(--mist-2);cursor:pointer;font-size:.97rem;font-weight:600;color:var(--navy)}
+  .robot-check input{width:22px;height:22px;margin:0;flex-shrink:0;cursor:pointer;accent-color:var(--azure)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .form-success{display:none;background:rgba(198,161,91,.1);border:1px solid var(--teal);
     color:var(--teal);padding:14px;border-radius:10px;font-size:.93rem;font-weight:600;text-align:center;margin-top:14px}
 
