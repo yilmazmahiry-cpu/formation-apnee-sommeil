@@ -54,7 +54,7 @@
       '<div class="sc-card" role="dialog" aria-modal="false" aria-labelledby="sc-title" aria-describedby="sc-text" tabindex="-1">' +
       '<div data-view="intro">' +
       '<p class="sc-title" id="sc-title">Cookies et confidentialité</p>' +
-      '<p class="sc-text" id="sc-text">Avec votre accord, nous utilisons des cookies pour mesurer l\'audience de ce site et l\'efficacité de nos publicités (Google, Meta). Aucun cookie de ce type n\'est déposé sans votre choix, et vous pouvez changer d\'avis à tout moment grâce au lien « Gérer mes cookies » en bas de page. <a href="confidentialite.html">En savoir plus</a></p>' +
+      '<p class="sc-text" id="sc-text">Avec votre accord, nous utilisons des cookies pour mesurer l\'audience de ce site et l\'efficacité de nos publicités (Google, Meta). Aucun cookie de ce type n\'est déposé sans votre choix, et vous pouvez changer d\'avis à tout moment grâce au lien « Gérer mes cookies » en bas de page. <a href="confidentialite">En savoir plus</a></p>' +
       '<div class="sc-actions">' +
       '<button type="button" class="sc-btn sc-btn-main" data-sc="refuse">Tout refuser</button>' +
       '<button type="button" class="sc-btn sc-btn-main" data-sc="accept">Tout accepter</button>' +
