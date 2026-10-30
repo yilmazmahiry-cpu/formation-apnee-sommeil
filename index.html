@@ -702,6 +702,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       btn.disabled=false;
       btn.textContent=originalText;
       if(data.success){
+        if(window.somneaTrack)window.somneaTrack('Lead',{content_name:'Formulaire contact accueil',content_category:profession},'lead-'+Date.now()+'-'+Math.random().toString(36).slice(2,8));
         document.getElementById('formSuccess').style.display='block';
         document.getElementById('f-prenom').value='';
         document.getElementById('f-nom').value='';
@@ -717,6 +718,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       toast('Une erreur est survenue. Merci de réessayer ou de nous écrire directement.');
     });
   }
+</script>
+<script src="meta-pixel.js"></script>
+<script>
+  document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(function(l){
+    l.addEventListener('click',function(){ if(window.somneaTrack) window.somneaTrack('InitiateCheckout',{value:1500,currency:'EUR',content_name:'Formation SAHOS 44h'}); });
+  });
 </script>
 <script src="consent.js" defer></script>
 </body>
