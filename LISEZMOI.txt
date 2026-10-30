@@ -1,0 +1,103 @@
+SOMNÉA · formationsahos.fr — LANDING META ADS, PIXEL ET ADMIN DE SUIVI
+=========================================================================
+Préparé par Bansō · octobre 2026
+
+CONTENU DU DOSSIER
+Ce dossier contient le site complet, prêt à déposer sur l'hébergement.
+
+Fichiers nouveaux ou modifiés :
+- formation-apnee-sommeil.html → NOUVEAU · la page dédiée aux publicités Meta
+- merci.html                   → NOUVEAU · la page affichée après le paiement
+- meta-pixel.js                → NOUVEAU · le pixel Meta (1113341564765241), chargé uniquement si le
+                                 visiteur accepte les cookies publicitaires
+- admin/                       → NOUVEAU · le tableau de bord de suivi (ventes, dépense Meta, leads)
+- .htaccess                    → NOUVEAU · URL sans « .html » (serveurs Apache)
+- index.html                   → MODIFIÉ · pixel ajouté (3 insertions, le reste est identique)
+
+Fichiers inchangés : site.css, consent.js, consent.css, favicons, images, Logo Somnea.
+
+Note Mac : le fichier .htaccess est masqué dans le Finder. Pour l'afficher : Cmd + Maj + . (point).
+
+
+1. MISE EN LIGNE
+- Déposer tout le contenu du dossier à la racine du site, par FTP ou via l'hébergeur.
+- Si le serveur possède déjà un fichier .htaccess, NE PAS l'écraser : y ajouter les règles de ce .htaccess.
+- Les autres pages du site déjà en ligne (programme, tarif, avis, faq, contact, mentions légales…) ne
+  sont pas dans ce dossier : elles restent en place. Sur chacune, ajouter juste avant la ligne
+  <script src="consent.js" defer></script> :
+      <script src="meta-pixel.js"></script>
+
+Adresses une fois en ligne :
+- Landing         https://formationsahos.fr/formation-apnee-sommeil
+- Remerciement    https://formationsahos.fr/merci
+- Admin           https://formationsahos.fr/admin/
+Les anciennes adresses en .html redirigent automatiquement vers la version sans extension.
+
+
+2. RÉGLAGE STRIPE (indispensable pour mesurer les ventes)
+a) Redirection après paiement
+   Stripe → Payment Links → le lien de la formation → Après le paiement →
+   « Rediriger vers votre site web » :
+      https://formationsahos.fr/merci?session_id={CHECKOUT_SESSION_ID}
+   (écrire {CHECKOUT_SESSION_ID} tel quel : Stripe le remplace par l'identifiant de la commande)
+
+b) Webhook pour l'admin
+   Stripe → Développeurs → Webhooks → Ajouter un endpoint
+      URL : https://formationsahos.fr/admin/webhook-stripe.php
+      Évènements : checkout.session.completed et checkout.session.async_payment_succeeded
+   Copier le « Secret de signature » (whsec_…) dans admin/config.php (voir point 4).
+
+
+3. URL À UTILISER DANS LES PUBLICITÉS META
+   https://formationsahos.fr/formation-apnee-sommeil?spe=cardio
+   Valeurs possibles de spe : generaliste, cardio, endocrino, orl, dentiste, travail, pharmacien.
+   Sans spe : accroche générale (délai d'attente en centre du sommeil).
+   Paramètres d'URL à ajouter dans Meta (champ « Paramètres d'URL » de chaque publicité) :
+      utm_source=meta&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.name}}
+   Nommer chaque publicité avec le même mot-clé, ex. « A4 · cardio · carrousel » : l'admin attribue
+   ainsi la dépense à la bonne spécialité.
+
+
+4. ADMIN DE SUIVI
+Prérequis : PHP 8.1 ou plus, avec pdo_sqlite et curl (standard chez la plupart des hébergeurs).
+Si l'hébergement est purement statique (sans PHP), l'admin ne fonctionnera pas : nous contacter.
+
+a) Comptes d'accès déjà créés (identifiant / mot de passe transmis séparément) :
+      mahir    → accès client
+      bastien  → accès Bansō
+   Compléter ensuite admin/config.php (déjà présent dans le dossier) :
+   - 'stripe_webhook_secret' : le secret du webhook (point 2 b).
+   - 'meta_ad_account_id' : identifiant du compte publicitaire (act_…).
+   - 'meta_access_token' : Paramètres de l'entreprise Meta → Utilisateurs système → Ajouter (Admin) →
+     lui attribuer le compte publicitaire et le pixel → Générer un jeton (autorisation ads_read).
+   - Facultatif : 'stripe_secret_key' (clé restreinte en lecture sur « Checkout Sessions ») pour
+     importer les ventes passées avec le bouton « Importer depuis Stripe ».
+b) Vérifier que admin/data/ est accessible en écriture par PHP.
+c) Ouvrir https://formationsahos.fr/admin/ , se connecter avec son identifiant, cliquer sur
+   « Synchroniser Meta ». Changer son mot de passe : voir admin/LISEZMOI.txt.
+d) Tâche planifiée quotidienne (ex. 6 h) pour mettre à jour les chiffres Meta automatiquement :
+      php /chemin/absolu/vers/admin/sync.php 30
+Le détail technique est dans admin/LISEZMOI.txt.
+
+L'admin affiche : dépense Meta, demandes de rappel (avec statut et notes), ventes Stripe avec leur
+provenance, coût par lead, coût par inscription réel, ROAS réel, résultats par spécialité et par pub.
+
+
+5. VÉRIFICATIONS APRÈS MISE EN LIGNE
+- Ouvrir https://formationsahos.fr/formation-apnee-sommeil.html : l'adresse doit devenir
+  /formation-apnee-sommeil sans « .html ».
+- Avec l'extension Chrome « Meta Pixel Helper » : aucun évènement tant que les cookies ne sont pas
+  acceptés ; après « Tout accepter » : PageView et ViewContent.
+- Envoyer une demande de rappel test : elle doit arriver par e-mail ET apparaître dans l'admin.
+- Google Tag Manager (GTM-WKT38CDW) : s'il contient déjà une balise « Meta Pixel », la supprimer,
+  sinon chaque évènement serait compté deux fois.
+
+
+6. RGPD
+- Les demandes de rappel sont stockées sur le serveur du site (admin/data/), jamais ailleurs.
+- Les demandes non converties sont supprimées automatiquement après 24 mois.
+- À ajouter à la politique de confidentialité : « Formulaire de rappel : nom, prénom, e-mail, téléphone
+  et profession, conservés 24 mois pour vous recontacter au sujet de la formation. Si vous acceptez les
+  cookies publicitaires, des données de mesure sont partagées avec Meta pour évaluer l'efficacité de
+  nos annonces. »
+- Sauvegarder régulièrement admin/data/somnea.sqlite et admin/config.php.

@@ -1,0 +1,4 @@
+# Secrets et donnees du back-office : ne jamais publier
+admin/config.php
+admin/data/*.sqlite
+admin/data/*.sqlite-*

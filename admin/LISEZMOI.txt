@@ -1,0 +1,65 @@
+ADMIN DE SUIVI META ADS — SOMNÉA
+================================
+
+Ce que fait l'admin (https://formationsahos.fr/admin/)
+- Ventes : chaque paiement Stripe est enregistré automatiquement (webhook), avec sa provenance :
+  « Pub Meta » (venu de la landing, + spécialité) ou « Site ».
+- Dépense Meta : clics, vues de page, leads et achats vus par Meta, par jour et par publicité.
+- Leads : chaque demande de rappel de la landing, avec un statut (À rappeler, Rappelé, Intéressé, Inscrit,
+  Perdu) et une note. Un lead qui paie passe tout seul en « Inscrit ».
+- Chiffres clés : coût par lead, coût par inscription réel, ROAS réel, taux lead → inscription, par période
+  et par spécialité.
+
+PRÉREQUIS
+- Hébergement avec PHP 8.1 ou plus, extensions pdo_sqlite et curl (standard chez OVH, o2switch, etc.).
+- Apache (les fichiers .htaccess protègent la base et la configuration). Sous Nginx, interdire l'accès à
+  /admin/data/ et aux fichiers config.php, lib.php, sync.php.
+
+INSTALLATION (15 min)
+1. Déposer le dossier « admin » à la racine du site (à côté de index.html).
+2. Compléter admin/config.php (déjà présent, avec les comptes créés) :
+   a. Comptes : « mahir » et « bastien » existent déjà (mots de passe transmis séparément).
+      Ajouter un compte : générer un hash avec
+        php -r "echo password_hash('MotDePasse', PASSWORD_DEFAULT), PHP_EOL;"
+      puis ajouter une ligne 'prenom' => 'hash', dans 'admin_users'.
+      Changer un mot de passe : remplacer le hash de la personne.
+   b. Stripe → Développeurs → Webhooks → Ajouter un endpoint
+        URL : https://formationsahos.fr/admin/webhook-stripe.php
+        Évènements : checkout.session.completed et checkout.session.async_payment_succeeded
+      puis copier le « Secret de signature » (whsec_…) dans 'stripe_webhook_secret'.
+   c. (Facultatif) Ventes passées : créer une clé restreinte Stripe en lecture sur « Checkout Sessions »
+      et la mettre dans 'stripe_secret_key' → bouton « Importer depuis Stripe » dans l'admin.
+   d. Meta : Paramètres de l'entreprise → Utilisateurs système → Ajouter (rôle Admin) → lui attribuer le
+      compte publicitaire et le pixel → Générer un jeton (autorisations ads_read, + ads_management si l'API
+      Conversions est activée). Mettre le jeton dans 'meta_access_token' et l'identifiant du compte
+      publicitaire (act_…) dans 'meta_ad_account_id'.
+3. Vérifier que le dossier admin/data est accessible en écriture par PHP (droits 750 ou 755).
+4. Ouvrir https://formationsahos.fr/admin/ , se connecter, cliquer sur « Synchroniser Meta ».
+5. Tâche planifiée (cron) quotidienne, ex. 6 h, pour la synchronisation Meta automatique :
+      php /chemin/absolu/vers/admin/sync.php 30
+   (chez OVH : Hébergement → Tâches planifiées – Cron)
+
+NOMMER LES PUBS POUR LE SUIVI PAR SPÉCIALITÉ
+Inclure le mot-clé dans le nom de chaque publicité : generaliste, cardio, endocrino, orl, dentiste, travail,
+pharmacien. Ex. « A4 · cardio · carrousel ». Les pubs sans mot-clé apparaissent en « Non attribuée ».
+L'URL de la pub doit utiliser le même mot-clé : …/formation-apnee-sommeil?spe=cardio
+
+API CONVERSIONS (facultatif, 'meta_capi_enabled' => true)
+Renvoie Lead et Purchase à Meta depuis le serveur, ce qui rattrape les évènements perdus à cause des
+bloqueurs de pub ou de Safari. Elle n'envoie RIEN pour les visiteurs qui ont refusé les cookies
+publicitaires (exigence CNIL). Pas de doublon avec le pixel : même identifiant d'évènement.
+Pour tester : Gestionnaire d'évènements → Tester les évènements → copier le code dans
+'meta_capi_test_code', puis le vider une fois vérifié.
+
+RGPD
+- Les leads sont stockés sur le serveur du site (admin/data/somnea.sqlite), jamais ailleurs.
+- Les leads non convertis sont supprimés automatiquement après 24 mois (réglable).
+- À ajouter dans la politique de confidentialité : formulaire de rappel → nom, prénom, e-mail, téléphone,
+  profession, conservés 24 mois pour vous recontacter ; transmis à Meta uniquement si vous avez accepté
+  les cookies publicitaires.
+
+MISES À JOUR
+Lors d'une mise à jour future de l'admin, ne jamais écraser admin/config.php ni admin/data/.
+
+SAUVEGARDE
+Le seul fichier à sauvegarder est admin/data/somnea.sqlite (et config.php).
