@@ -430,6 +430,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (function(){
   'use strict';
   var STRIPE='https://buy.stripe.com/00w6oGfQMgUlgfi63p4ow00';
+  /* Admin de suivi hébergé par Bansō : adresse du fichier lead.php */
+  var ADMIN_LEAD_URL='https://admin.formationsahos.fr/lead.php';
   var qs=new URLSearchParams(location.search);
 
   /* ---------- 1. Accroche selon la spécialité (?spe=) ---------- */
@@ -525,9 +527,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var consent=!!(window.somneaHasAdsConsent&&window.somneaHasAdsConsent());
     function cookie(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):'';}
 
-    /* Copie du lead dans l'admin de suivi (/admin) — n'empêche pas l'envoi de l'e-mail si l'admin est indisponible */
+    /* Copie du lead dans l'admin de suivi Bansō — n'empêche pas l'envoi de l'e-mail si l'admin est indisponible */
     try{
-      fetch('admin/lead.php',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      fetch(ADMIN_LEAD_URL,{method:'POST',mode:'cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({
         prenom:prenom,nom:nom,email:email,telephone:tel,
         profession:v('f-profession'),mode_exercice:v('f-statut'),message:v('f-message'),
         spe:cfg?spe:'general',source:'landing_meta',
