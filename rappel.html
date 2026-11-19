@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<!-- Consentement (Google Consent Mode v2) : tout est refusé tant que le visiteur n'a pas choisi -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{var c=JSON.parse(localStorage.getItem('somnea_consent_v1')||'null');if(c&&Date.now()-c.ts<15552000000){var a=c.ads?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:a,ad_user_data:a,ad_personalization:a});}}catch(e){}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKT38CDW');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A2342">
+<title>Être rappelé · Formation apnée du sommeil pour médecins | Somnéa</title>
+<meta name="description" content="Laissez vos coordonnées : un conseiller Somnéa vous rappelle pour vous présenter la formation SAHOS de 44 h en ligne (PPC et OAM), son financement et les démarches DPC.">
+<!-- Page réservée aux campagnes (pubs, e-mails, SMS) : pas d'indexation -->
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://formationsahos.fr/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Formation apnée du sommeil pour médecins · Somnéa">
+<meta property="og:description" content="44 h en ligne pour prendre en charge vous-même la PPC et l'orthèse d'avancée mandibulaire. Un conseiller vous rappelle.">
+<meta property="og:image" content="https://formationsahos.fr/images/somnea-wordmark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=6">
+<link rel="stylesheet" href="consent.css">
+<style>
+  /* Page courte « rappel » : pensée d'abord pour le téléphone, formulaire visible tout de suite */
+  body{background:var(--paper)}
+  .rp-top{background:var(--navy);color:#fff;padding:12px 0 78px;position:relative;overflow:hidden}
+  .rp-top::after{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.28),transparent 70%)}
+  .rp-wrap{max-width:560px;margin:0 auto;padding:0 18px;position:relative;z-index:1}
+  .rp-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+  .rp-bar .logo{color:#fff;font-size:1.2rem}
+  .rp-bar .logo .mark{width:30px;height:30px}
+  .rp-call{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1.5px solid rgba(255,255,255,.28);color:#fff;font-weight:700;font-size:.88rem;white-space:nowrap}
+  .rp-call svg{width:16px;height:16px;color:#DFC48A}
+  .rp-eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;color:#DFC48A}
+  .rp-top h1{color:#fff;font-size:clamp(1.45rem,6vw,2.2rem);margin:6px 0 12px;line-height:1.15}
+  .rp-top h1 em{font-style:normal;color:#DFC48A}
+  .rp-checks{list-style:none;display:grid;gap:5px;padding:0}
+  .rp-checks li{display:flex;gap:9px;align-items:flex-start;font-size:.9rem;color:rgba(255,255,255,.88);line-height:1.4}
+  .rp-checks svg{width:18px;height:18px;flex-shrink:0;margin-top:1px;color:#DFC48A}
+
+  .rp-card{max-width:560px;margin:-60px auto 0;padding:0 12px;position:relative;z-index:2}
+  .rp-form{background:#fff;border-radius:20px;padding:22px 18px 18px;box-shadow:var(--shadow-lg)}
+  .rp-form h2{font-size:1.25rem;margin-bottom:4px}
+  .rp-sub{font-size:.88rem;color:var(--soft);margin-bottom:16px;display:flex;align-items:center;gap:7px}
+  .rp-sub svg{width:16px;height:16px;color:var(--gold-deep);flex-shrink:0}
+  .rp-form .form-row{grid-template-columns:1fr 1fr;gap:10px}
+  .rp-form .field{margin-bottom:12px}
+  .rp-form .field label{font-size:.8rem;margin-bottom:5px}
+  .rp-form .field input,.rp-form .field select,.rp-form .field textarea{padding:13px 13px;font-size:16px;border-radius:12px}
+  .rp-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .rp-seg label{margin:0;position:relative}
+  .rp-seg input{-webkit-appearance:none;appearance:none;position:absolute;opacity:0;width:1px!important;height:1px!important;padding:0!important;border:0!important;margin:0;left:0;top:0;pointer-events:none}
+  .rp-seg span{display:block;text-align:center;padding:11px 4px;border:1.5px solid var(--line);border-radius:12px;font-size:.88rem;font-weight:700;color:var(--soft);background:var(--mist-2);cursor:pointer}
+  .rp-seg input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+  .rp-seg input:focus-visible+span{outline:3px solid rgba(47,111,168,.4)}
+  .rp-more{background:none;border:0;padding:0 0 12px;font:inherit;font-size:.86rem;font-weight:700;color:var(--blue);cursor:pointer}
+  .rp-form .btn-primary{width:100%;justify-content:center;padding:16px;font-size:1.05rem;border-radius:14px}
+  .rp-note{font-size:.76rem;color:var(--soft);margin-top:10px;line-height:1.5;text-align:center}
+  .rp-note a{color:var(--blue);text-decoration:underline}
+
+  .rp-done{display:none;text-align:center;padding:10px 4px 6px}
+  .rp-done .ok{width:56px;height:56px;border-radius:50%;background:#E3F4EA;color:#1E7A46;display:grid;place-items:center;margin:0 auto 12px}
+  .rp-done .ok svg{width:28px;height:28px}
+  .rp-done h2{margin-bottom:8px}
+  .rp-done p{color:var(--soft);font-size:.95rem;margin-bottom:16px}
+  .rp-done .btn{width:100%;justify-content:center;margin-bottom:8px}
+  .rp-form.sent .rp-fields{display:none}
+  .rp-form.sent .rp-done{display:block}
+
+  .rp-facts{max-width:560px;margin:22px auto 0;padding:0 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+  .rp-facts div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 6px}
+  .rp-facts b{display:block;font-family:'Fraunces',serif;font-size:1.25rem;color:var(--navy);line-height:1.1}
+  .rp-facts span{font-size:.72rem;color:var(--soft);line-height:1.3;display:block;margin-top:4px}
+  .rp-links{max-width:560px;margin:18px auto 0;padding:0 18px 28px;text-align:center;font-size:.9rem}
+  .rp-links a{color:var(--blue);font-weight:700;text-decoration:underline}
+  .rp-foot{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;font-size:.78rem;padding:22px 18px calc(22px + env(safe-area-inset-bottom))}
+  .rp-foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:8px}
+  .rp-foot a{color:rgba(255,255,255,.75)}
+  .toast{visibility:hidden}.toast.show{visibility:visible}
+  @media(min-width:700px){
+    .rp-top{padding:20px 0 96px}
+    .rp-form{padding:30px 28px 24px}
+  }
+  @media(max-width:340px){.rp-form .form-row{grid-template-columns:1fr}.rp-call b{display:none}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKT38CDW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="rp-top" role="banner">
+  <div class="rp-wrap">
+    <div class="rp-bar">
+      <span class="logo"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>Somnéa</span>
+      <a class="rp-call" href="tel:+33189480454" id="rp-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13 1 .37 1.94.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.81.57 2.81.7A2 2 0 0122 16.92z"/></svg><b>01 89 48 04 54</b></a>
+    </div>
+    <span class="rp-eyebrow" id="rp-eyebrow">Formation médecins · 44 h en ligne</span>
+    <h1 id="rp-title">Traitez vous-même <em>l'apnée du sommeil</em> de vos patients.</h1>
+    <ul class="rp-checks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dépister, interpréter une polygraphie, prescrire PPC et OAM</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100 % en ligne, à votre rythme, accès à vie</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Organisme certifié Qualiopi et agréé DPC</li>
+    </ul>
+  </div>
+</div>
+
+<main>
+  <div class="rp-card" id="rappel">
+    <form class="rp-form" id="rp-form" novalidate>
+      <div class="rp-fields">
+        <h2>Un conseiller vous rappelle</h2>
+        <p class="rp-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Dans l'heure aux horaires d'ouverture · sans engagement</p>
+        <div class="form-row">
+          <div class="field"><label for="f-prenom">Prénom</label><input type="text" id="f-prenom" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" required></div>
+          <div class="field"><label for="f-nom">Nom</label><input type="text" id="f-nom" autocomplete="family-name" autocapitalize="words" enterkeyhint="next" required></div>
+        </div>
+        <div class="field"><label for="f-tel">Téléphone</label><input type="tel" id="f-tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" enterkeyhint="next" required></div>
+        <div class="field"><label for="f-email">E-mail</label><input type="email" id="f-email" autocomplete="email" inputmode="email" autocapitalize="off" placeholder="vous@exemple.fr" enterkeyhint="next" required></div>
+        <div class="field"><label for="f-profession">Profession</label>
+          <select id="f-profession">
+            <option value="Médecin généraliste">Médecin généraliste</option>
+            <option value="Cardiologue">Cardiologue</option>
+            <option value="Endocrinologue">Endocrinologue</option>
+            <option value="ORL">ORL</option>
+            <option value="Pneumologue">Pneumologue</option>
+            <option value="Médecin du travail">Médecin du travail</option>
+            <option value="Autre spécialité médicale">Autre spécialité médicale</option>
+            <option value="Chirurgien-dentiste">Chirurgien-dentiste</option>
+            <option value="Pharmacien">Pharmacien</option>
+            <option value="Autre professionnel de santé">Autre professionnel de santé</option>
+          </select>
+        </div>
+        <div class="field"><label>Mode d'exercice</label>
+          <div class="rp-seg" role="radiogroup" aria-label="Mode d'exercice">
+            <label><input type="radio" name="mode" value="Libéral" checked><span>Libéral</span></label>
+            <label><input type="radio" name="mode" value="Salarié"><span>Salarié</span></label>
+            <label><input type="radio" name="mode" value="Mixte"><span>Mixte</span></label>
+          </div>
+        </div>
+        <button type="button" class="rp-more" id="rp-more" aria-expanded="false">+ Ajouter une question (financement, DPC…)</button>
+        <div class="field" id="rp-msg" hidden><label for="f-message">Votre question</label><textarea id="f-message" rows="3" placeholder="Financement, durée, démarches DPC…"></textarea></div>
+        <!-- Anti-spam : champ invisible, doit rester vide -->
+        <input type="checkbox" name="botcheck" id="f-botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary" id="f-submit">Être rappelé</button>
+        <p class="rp-note">Vos coordonnées servent uniquement à vous recontacter au sujet de la formation. <a href="confidentialite">Confidentialité</a></p>
+      </div>
+      <div class="rp-done" role="status" aria-live="polite">
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h2 id="rp-done-title">Merci, c'est noté !</h2>
+        <p>Un conseiller vous rappelle très vite. Vous êtes pressé ? Appelez-nous directement.</p>
+        <a class="btn btn-primary" href="tel:+33189480454">Appeler le 01 89 48 04 54</a>
+        <a class="btn btn-ghost" href="formation-apnee-sommeil" id="rp-prog">Voir le programme en attendant</a>
+      </div>
+    </form>
+  </div>
+
+  <section class="rp-facts" aria-label="La formation en bref">
+    <div><b>44 h</b><span>de formation en ligne</span></div>
+    <div><b>30+</b><span>cas cliniques commentés</span></div>
+    <div><b>1 500 €</b><span>paiement en plusieurs fois possible</span></div>
+  </section>
+  <p class="rp-links"><a href="formation-apnee-sommeil" id="rp-more-link">Découvrir le programme détaillé</a></p>
+</main>
+
+<footer class="rp-foot">
+  <nav>
+    <a href="./">Site Somnéa</a>
+    <a href="mentions-legales">Mentions légales</a>
+    <a href="cgv">CGV</a>
+    <a href="confidentialite">Confidentialité</a>
+    <a href="#" data-cookie-settings>Gérer mes cookies</a>
+  </nav>
+  <p>© 2026 Somnéa — Organisme agréé DPC et certifié Qualiopi.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="meta-pixel.js"></script>
+<script>
+(function(){
+  'use strict';
+  /* Admin de suivi hébergé par Bansō : adresse du fichier lead.php */
+  var ADMIN_LEAD_URL='https://admin.formationsahos.fr/lead.php';
+  var qs=new URLSearchParams(location.search);
+  var crm=window.somneaCrm||null;   /* arrivé par un SMS ou un e-mail : origine notée, rien envoyé à Meta */
+
+  /* Accroche selon la spécialité (?spe=), comme la landing */
+  var SPE={
+    generaliste:{eyebrow:'Médecins généralistes · 44 h en ligne',title:'Ne perdez plus le fil de vos patients <em>adressés en pneumologie</em>.',prof:'Médecin généraliste'},
+    cardio:{eyebrow:'Cardiologues · 44 h en ligne',title:'HTA résistante&nbsp;? <em>Pensez SAHOS</em>, et traitez-le vous-même.',prof:'Cardiologue'},
+    endocrino:{eyebrow:'Endocrinologues · 44 h en ligne',title:'Derrière un diabète déséquilibré, <em>un SAHOS jamais recherché</em>.',prof:'Endocrinologue'},
+    orl:{eyebrow:'ORL · 44 h en ligne',title:'Vos patients apnéiques&nbsp;: <em>prenez-les en charge vous-même</em>.',prof:'ORL'},
+    dentiste:{eyebrow:'Chirurgiens-dentistes · 44 h en ligne',title:'Devenez le référent de <em>l\'orthèse d\'avancée mandibulaire</em>.',prof:'Chirurgien-dentiste'},
+    travail:{eyebrow:'Médecins du travail · 44 h en ligne',title:'Fatigue du travail posté ou vrai SAHOS&nbsp;? <em>Apprenez à trancher.</em>',prof:'Médecin du travail'},
+    pharmacien:{eyebrow:'Pharmaciens · formation en ligne',title:'Le SAHOS <em>au comptoir</em>&nbsp;: repérez, orientez, accompagnez.',prof:'Pharmacien'}
+  };
+  var spe=(qs.get('spe')||'').toLowerCase(), cfg=SPE[spe];
+  function setProf(p){var s=document.getElementById('f-profession');for(var i=0;i<s.options.length;i++){if(s.options[i].value===p){s.selectedIndex=i;break;}}}
+  if(cfg){
+    document.getElementById('rp-eyebrow').textContent=cfg.eyebrow;
+    document.getElementById('rp-title').innerHTML=cfg.title;
+    setProf(cfg.prof);
+  }
+  /* Les liens vers le programme gardent la spécialité et le suivi de campagne */
+  if(location.search){['rp-prog','rp-more-link'].forEach(function(id){var a=document.getElementById(id);a.href=a.getAttribute('href')+location.search;});}
+
+  window.somneaTrack('ViewContent',{content_name:'Page rappel',content_category:spe||'general'});
+  document.getElementById('rp-call').addEventListener('click',function(){
+    window.somneaTrack('Contact',{content_name:'Appel depuis page rappel'});
+    (window.dataLayer=window.dataLayer||[]).push({event:'rp_call'});
+  });
+
+  var more=document.getElementById('rp-more');
+  more.addEventListener('click',function(){var m=document.getElementById('rp-msg');m.hidden=false;more.hidden=true;more.setAttribute('aria-expanded','true');document.getElementById('f-message').focus();});
+
+  function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},3600);}
+  function mark(id,bad){var el=document.getElementById(id);el.style.borderColor=bad?'#C0563A':'';if(bad)el.setAttribute('aria-invalid','true');else el.removeAttribute('aria-invalid');return bad;}
+
+  var form=document.getElementById('rp-form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim();};
+    var prenom=v('f-prenom'),nom=v('f-nom'),tel=v('f-tel'),email=v('f-email');
+    var mode=(form.querySelector('input[name=mode]:checked')||{}).value||'';
+    var bad=[mark('f-prenom',!prenom),mark('f-nom',!nom),mark('f-tel',tel.replace(/\D/g,'').length<9),mark('f-email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))];
+    if(bad.indexOf(true)>=0){
+      toast(bad[2]?'Merci de vérifier votre numéro de téléphone.':bad[3]?'Merci de vérifier votre adresse e-mail.':'Merci de renseigner votre prénom et votre nom.');
+      var first=form.querySelector('[aria-invalid=true]');if(first)first.focus();
+      return;
+    }
+    var btn=document.getElementById('f-submit'),label=btn.textContent;
+    btn.disabled=true;btn.textContent='Envoi en cours…';
+    var eventId='lead-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
+    var consent=!!(window.somneaHasAdsConsent&&window.somneaHasAdsConsent());
+    function cookie(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):'';}
+    var src=qs.get('utm_source')||'';
+
+    /* Copie du lead dans l'admin de suivi Bansō — n'empêche pas l'envoi de l'e-mail si l'admin est indisponible */
+    try{
+      fetch(ADMIN_LEAD_URL,{method:'POST',mode:'cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({
+        prenom:prenom,nom:nom,email:email,telephone:tel,
+        profession:v('f-profession'),mode_exercice:mode,message:v('f-message'),
+        spe:cfg?spe:'general',source:crm?(crm.channel+'_rappel'):('page_rappel'+(src?'_'+src.replace(/[^a-z0-9]/gi,'').slice(0,20):'')),
+        utm_campaign:crm&&crm.campaign?crm.campaign:(qs.get('utm_campaign')||''),utm_content:qs.get('utm_content')||'',
+        no_meta:!!crm,
+        consent_ads:consent,event_id:eventId,
+        fbp:consent?cookie('_fbp'):'',fbc:consent?cookie('_fbc'):'',
+        botcheck:document.getElementById('f-botcheck').checked
+      })}).catch(function(){});
+    }catch(err){}
+
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        access_key:'fcd6ac1e-e787-4e56-888e-28e8146fcb4c',
+        subject:'🔔 Demande de RAPPEL (page rappel) — '+prenom+' '+nom+' · '+v('f-profession'),
+        from_name:prenom+' '+nom,
+        botcheck:document.getElementById('f-botcheck').checked,
+        prenom:prenom,nom:nom,telephone:tel,email:email,
+        profession:v('f-profession'),mode_exercice:mode,
+        message:v('f-message')||'(aucun message)',
+        source:(crm?'Campagne '+(crm.channel==='sms'?'SMS':'e-mail')+' · ':'')+'Page rappel mobile'+(cfg?' · '+spe:'')+(src?' · '+src:''),
+        utm_campaign:crm&&crm.campaign?crm.campaign:(qs.get('utm_campaign')||''),utm_content:qs.get('utm_content')||''
+      })
+    }).then(function(r){return r.json();}).then(function(data){
+      btn.disabled=false;btn.textContent=label;
+      if(data.success){
+        window.somneaTrack('Lead',{content_name:'Rappel page courte',content_category:v('f-profession')},eventId);
+        (window.dataLayer=window.dataLayer||[]).push({event:'rp_lead',rp_spe:spe||'general'});
+        document.getElementById('rp-done-title').textContent='Merci'+(prenom?' '+prenom:'')+', c\'est noté !';
+        form.classList.add('sent');
+        window.scrollTo({top:Math.max(0,document.getElementById('rappel').getBoundingClientRect().top+window.scrollY-12),behavior:'smooth'});
+      }else{
+        toast('Une erreur est survenue. Merci de réessayer ou de nous appeler au 01 89 48 04 54.');
+      }
+    }).catch(function(){
+      btn.disabled=false;btn.textContent=label;
+      toast('Une erreur est survenue. Merci de réessayer ou de nous appeler au 01 89 48 04 54.');
+    });
+  });
+})();
+</script>
+<script src="stats.js" defer></script>
+<script src="consent.js" defer></script>
+</body>
+</html>
