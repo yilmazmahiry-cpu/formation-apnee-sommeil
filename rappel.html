@@ -198,6 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* Admin de suivi hébergé par Bansō : adresse du fichier lead.php */
   var ADMIN_LEAD_URL='https://admin.formationsahos.fr/lead.php';
   var qs=new URLSearchParams(location.search);
+  var crm=window.somneaCrm||null;   /* arrivé par un SMS ou un e-mail : origine notée, rien envoyé à Meta */
 
   /* Accroche selon la spécialité (?spe=), comme la landing */
   var SPE={
@@ -255,8 +256,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       fetch(ADMIN_LEAD_URL,{method:'POST',mode:'cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({
         prenom:prenom,nom:nom,email:email,telephone:tel,
         profession:v('f-profession'),mode_exercice:mode,message:v('f-message'),
-        spe:cfg?spe:'general',source:'page_rappel'+(src?'_'+src.replace(/[^a-z0-9]/gi,'').slice(0,20):''),
-        utm_campaign:qs.get('utm_campaign')||'',utm_content:qs.get('utm_content')||'',
+        spe:cfg?spe:'general',source:crm?(crm.channel+'_rappel'):('page_rappel'+(src?'_'+src.replace(/[^a-z0-9]/gi,'').slice(0,20):'')),
+        utm_campaign:crm&&crm.campaign?crm.campaign:(qs.get('utm_campaign')||''),utm_content:qs.get('utm_content')||'',
+        no_meta:!!crm,
         consent_ads:consent,event_id:eventId,
         fbp:consent?cookie('_fbp'):'',fbc:consent?cookie('_fbc'):'',
         botcheck:document.getElementById('f-botcheck').checked
@@ -274,8 +276,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         prenom:prenom,nom:nom,telephone:tel,email:email,
         profession:v('f-profession'),mode_exercice:mode,
         message:v('f-message')||'(aucun message)',
-        source:'Page rappel mobile'+(cfg?' · '+spe:'')+(src?' · '+src:''),
-        utm_campaign:qs.get('utm_campaign')||'',utm_content:qs.get('utm_content')||''
+        source:(crm?'Campagne '+(crm.channel==='sms'?'SMS':'e-mail')+' · ':'')+'Page rappel mobile'+(cfg?' · '+spe:'')+(src?' · '+src:''),
+        utm_campaign:crm&&crm.campaign?crm.campaign:(qs.get('utm_campaign')||''),utm_content:qs.get('utm_content')||''
       })
     }).then(function(r){return r.json();}).then(function(data){
       btn.disabled=false;btn.textContent=label;

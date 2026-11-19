@@ -22,7 +22,24 @@
   var loaded = false;
   var pending = [];
 
+  /* Visiteur arrivé par une campagne SMS ou e-mail (Brevo) : rien n'est envoyé à Meta pendant toute la visite.
+     Repéré par ?s=<code> (lien SMS suivi par l'admin) ou utm_source=brevo / sms / email ; mémorisé pour la session. */
+  var crm = null;
+  try {
+    var q = new URLSearchParams(location.search);
+    var src = (q.get('utm_source') || '').toLowerCase(), med = (q.get('utm_medium') || '').toLowerCase(), code = (q.get('s') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 20);
+    if (code || /^(brevo|sms|email|e-mail|newsletter|emailing)$/.test(src) || /^(sms|email|e-mail)$/.test(med)) {
+      crm = { code: code, channel: code || med === 'sms' || src === 'sms' ? 'sms' : 'email', campaign: code ? 'sms-' + code : (q.get('utm_campaign') || '') };
+      sessionStorage.setItem('somnea_crm', JSON.stringify(crm));
+    } else {
+      crm = JSON.parse(sessionStorage.getItem('somnea_crm') || 'null');
+    }
+  } catch (e) {}
+  window.somneaCrm = crm;          // { code, channel: 'sms' | 'email', campaign } ou null
+  window.somneaNoMeta = !!crm;
+
   function adsConsent() {
+    if (window.somneaNoMeta) return false;   // campagne SMS / e-mail : jamais de Meta
     try {
       var c = JSON.parse(localStorage.getItem(KEY) || 'null');
       return !!(c && c.ads && typeof c.ts === 'number' && Date.now() - c.ts < MAX_AGE_MS);
